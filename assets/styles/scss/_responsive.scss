@@ -47,10 +47,51 @@
         }
     }
     .hero{
-        transform: translateY(-10px);
-        background-position: top center;
+        background: url(../../img/bg-hero-mobile.jpg) top center no-repeat;
+        transform: translateY(0);
+        // background-position: top center;
+        height: 80vh;
         .container{
+            display: flex;
             justify-content: center;
+            align-items: center;
+            .form{
+                margin-top: 0;
+            }
         }
+    }
+    .mobile-top{
+        display: block;
+        padding: 0 30px;
+        div{
+            margin-bottom: 10px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            img{
+                width: 60px;
+                margin-right: 10px;
+            }
+            span{
+                font-size: 1em;
+                color: $mainColor;
+                &.fw-bold{
+                    font-size: 1.4em;
+                }
+            }
+            .btn-primary{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// desktop and larger
+@media (width >= 1500px){
+    .hero{
+        height: 800px;
     }
 }

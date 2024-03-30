@@ -1,0 +1,92 @@
+// mobile top
+.mobile-top{
+    display: none;
+}
+// our fleet
+.our-fleet{
+    color:$mainColor;
+    h1{
+        transform: translateY(-30px);
+    }
+    .carousel{
+        .carousel-control-prev-icon{
+            background-image:url(../../img/arrow-left-circle-fill.svg) ;
+            transform: translateX(-30px);
+        }
+        .carousel-control-next-icon{
+            background-image: url(../../img/arrow-right-circle-fill.svg);
+            transform: translateX(30px);
+        }
+        img[src$=".svg"]{
+            width: 16px;
+        }
+        img{
+            width: 100%;
+        }
+        figure{
+            border:solid 1px $mainColor;
+            width: 20%;
+            margin-right: .8em;
+            padding-bottom: 1em;
+            border-radius: 2px;
+            &:last-child{
+                margin-right: 0;
+            }
+            figcaption{
+                background-color: $deepPink;
+                color: $white;
+                width: 60%;
+                padding: .4em;
+                margin-bottom: .8em;
+            }
+        }
+        
+    }
+}
+// video Buenos Aires city
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    #video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; 
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:rgba(103, 110, 128,.5); 
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+      h3{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8); 
+        font-weight: 500;
+        line-height: normal; 
+      }
+      .btn-primary{
+        width: 300px;
+        display: block;
+        margin: auto;
+        font-size: 1.2em;
+      }
+    }
+  }
+  
+  
+  
