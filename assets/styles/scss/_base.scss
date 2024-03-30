@@ -1,0 +1,67 @@
+// gral
+*{
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+.container{
+    width: 95% !important;
+    max-width: 95%;
+}
+
+//fonts
+@font-face {
+    font-family: 'frutigerbold';
+    src: url('../../fonts/ftb-webfont.woff2') format('woff2'),
+         url('../../fonts/ftb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutigerlight_cn';
+    src: url('../../fonts/ftlc-webfont.woff2') format('woff2'),
+         url('../../fonts/ftlc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// colors
+$mainColor:rgb(103, 110, 128);
+$secondaryColor:rgba(35, 30, 33, .6);
+$softPink:rgb(245, 181, 206);
+$deepPink:rgb(236, 101, 157);
+$white:rgb(249, 246, 246);
+// buttons
+.btn-primary{
+    background-color: $deepPink;
+    color: $white;
+    padding: .6em ;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'frutigerlight_cn';
+    font-weight: 500;
+    letter-spacing: .06em;
+    display: block;
+    text-align: center;
+    border:none;
+    &:hover{
+        background-color: $softPink;
+        border: solid 0.6px $softPink;
+        transition: all .4s ease;
+    };
+}
+
+// backgrounds
+.bg-deeppink{
+    background-color: $deepPink;
+}
+
+// borders
+.border-radius-top-left{
+    border-top-left-radius: 10px!important;
+    border-top-right-radius: 0!important;
+}
+.border-radius-top-right{
+    border-top-right-radius: 10px!important;
+    border-top-left-radius: 0!important;
+}

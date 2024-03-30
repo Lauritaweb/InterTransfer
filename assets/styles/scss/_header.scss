@@ -1,0 +1,112 @@
+.header{
+    .row{
+        margin: 0;
+    }
+    .border-bottom{
+        border-bottom:.8px solid $secondaryColor !important;
+    }
+    .top-header{
+        padding: .4em 0;
+        color:$mainColor;
+        p{
+            margin-bottom: 0;
+            font-size: .8em;
+        }
+    }
+    .top-main{
+        padding: .8em 0;
+        display: flex;
+        align-items: center;
+        font-size: .9em;
+        color: $mainColor;
+        font-weight: 400;
+        box-sizing: border-box;
+        .border-end{
+            height: 55px;
+            display: flex;
+            align-items: center;
+            border-right: solid 1px $secondaryColor !important;
+            img{
+                margin-right: .4em;
+            }
+        }
+        .brand{
+            width:80px;
+            margin-top: 5px;
+        }
+    }
+    // nav
+    .menu{
+        background-color: $mainColor;
+        margin-top: 20px;
+        padding: 0;
+        position: relative;
+        z-index: 4;
+        ul{
+            width: 100%;
+            li{
+                width: 20%;
+                text-align: center;
+                a{
+                    text-transform: uppercase;
+                    color: $white;
+                    font-weight: 500;
+                }
+            }
+        }
+        .active{
+            background-color: $deepPink;
+            color: $white;
+        }
+    }
+}
+
+.hero{
+    transform: translateY(-60px);
+    position: relative;
+    z-index: 1;
+    height: 90vh;
+    background: url(../../img/bg-hero.jpg) no-repeat left 40px;
+    background-size:cover;
+    display: flex;
+    justify-content: flex-end;
+    .container{
+        display: flex;
+        justify-content: flex-end;
+        .form{
+            width: 280px!important;
+            height: 267px;
+            flex-shrink: 0; 
+            margin-top: 100px;
+            width: 30%;
+            position: relative;
+            z-index: 5;
+            #myTab{
+                .nav-item{
+                    width: 50%;
+                }
+                .nav-link{
+                    border-color:transparent;
+                    background-color:$white;
+                    width: 100%;
+                    font-size: .8em;
+                    color:$mainColor;
+                    &.active{
+                        background-color: $deepPink!important;
+                        color:$white!important;
+                    }
+                }
+            }
+            .tab-content{
+                background-color: rgba(103, 110, 128,.6);
+                margin-top: 0!important;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                font-size: .9em;
+                input{
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+}

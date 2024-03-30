@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Traslado al Aeropuerto en Buenos Aires | Inter Transfer </title>
+    <meta name="description" content="Descubre los mejores servicios de traslado al aeropuerto en Buenos Aires con Inter Transfer. Viaja con comodidad y seguridad. ¡Reserva ahora!">
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <!-- css BS -->
+    <link href="./assets/styles/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="./assets/styles/css/main.css">
+</head>
+<body>
+    <header class="container header">
+        <div class="top-header border-bottom d-flex justify-content-between align-items-center">
+            <p>Translados al aeropuerto en Buenos Aires</p>
+            <div>
+                <img src="./assets/img/icon-instagram.svg" alt="Seguinos en instagram">
+                <img src="./assets/img/icon-whatsapp.svg" alt="Comunicate por whatsapp con Inter transfer y hace tu reserva">
+            </div>
+        </div><!-- ends top header -->
+        <div class="top-main row">
+            <div class="col-lg-1 border-end">
+                <img src="./assets/img/logo-inter-transfer.svg" alt="Logo de Inter Transfer" class="brand">
+            </div><!-- ends box1 -->
+            <div class="col-lg-2 border-end">
+                <img src="./assets/img/icon-clock.svg" alt="Reloj">
+                <span>Espera bonificada</span>
+            </div><!-- ends box2 -->
+            <div class="col-lg-2 border-end">
+                <img src="./assets/img/icon-plane.svg" alt="Avión">
+                <span>Seguimos tu vuelo</span>
+            </div><!-- ends box3 -->
+            <div class="col-lg-2 border-end">
+                <img src="./assets/img/icon-paw.svg" alt="Reloj">
+                <span>Viaja con tu mascota</span>
+            </div><!-- ends box4 -->
+            <div class="col-lg-2 border-end">
+                <img src="./assets/img/icon-suitcase.svg" alt="Valija">
+                <span>Seguro para pasajeros</span>
+            </div><!-- ends box5 -->
+            <div class="col-lg-2">
+                <img src="./assets/img/icon-baby-seat.svg" alt="Silla para bebé en el vehículo">
+                <span>Sillitas para bebés</span>
+            </div><!-- ends box6 -->
+            <div class="col-lg-1">
+                <a href="#" class="btn-primary">RESERVAR</a>
+            </div><!-- ends box7 -->
+            <!-- starts navbar -->
+            <nav class="navbar navbar-expand-lg menu">
+                <div class="w-100">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Tarifas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Reservar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Flota</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Preguntas frecuentes</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div><!-- ends top main -->
+    </header><!-- ends header -->
+    <!-- starts hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="form">
+          <!-- tabs -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active border-radius-top-left" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Dirección</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link border-radius-top-right" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Fecha y hora</button>
+            </li>
+          </ul><!-- ends tabs -->
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <form class="p-3">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Desde</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Hasta</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn-primary">Reservar</button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <form class="p-3">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Fecha</label>
+                  <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Hora</label>
+                  <input type="time" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn-primary">Reservar</button>
+              </form>
+            </div>
+          </div><!-- ends tab-content -->
+        </div><!-- ends div form -->
+      </div><!-- ends container -->
+    </section><!-- ends hero -->
+
+
+
+
+
+
+
+    <!-- Js -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+</html>

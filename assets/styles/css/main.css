@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
+* {
+  font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 95% !important;
+  max-width: 95%;
+}
+
+@font-face {
+  font-family: "frutigerbold";
+  src: url("../../fonts/ftb-webfont.woff2") format("woff2"), url("../../fonts/ftb-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "frutigerlight_cn";
+  src: url("../../fonts/ftlc-webfont.woff2") format("woff2"), url("../../fonts/ftlc-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.btn-primary {
+  background-color: rgb(236, 101, 157);
+  color: rgb(249, 246, 246);
+  padding: 0.6em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "frutigerlight_cn";
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  display: block;
+  text-align: center;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: rgb(245, 181, 206);
+  border: solid 0.6px rgb(245, 181, 206);
+  transition: all 0.4s ease;
+}
+
+.bg-deeppink {
+  background-color: rgb(236, 101, 157);
+}
+
+.border-radius-top-left {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 0 !important;
+}
+
+.border-radius-top-right {
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 0 !important;
+}
+
+.header .row {
+  margin: 0;
+}
+.header .border-bottom {
+  border-bottom: 0.8px solid rgba(35, 30, 33, 0.6) !important;
+}
+.header .top-header {
+  padding: 0.4em 0;
+  color: rgb(103, 110, 128);
+}
+.header .top-header p {
+  margin-bottom: 0;
+  font-size: 0.8em;
+}
+.header .top-main {
+  padding: 0.8em 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: rgb(103, 110, 128);
+  font-weight: 400;
+  box-sizing: border-box;
+}
+.header .top-main .border-end {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  border-right: solid 1px rgba(35, 30, 33, 0.6) !important;
+}
+.header .top-main .border-end img {
+  margin-right: 0.4em;
+}
+.header .top-main .brand {
+  width: 80px;
+  margin-top: 5px;
+}
+.header .menu {
+  background-color: rgb(103, 110, 128);
+  margin-top: 20px;
+  padding: 0;
+  position: relative;
+  z-index: 4;
+}
+.header .menu ul {
+  width: 100%;
+}
+.header .menu ul li {
+  width: 20%;
+  text-align: center;
+}
+.header .menu ul li a {
+  text-transform: uppercase;
+  color: rgb(249, 246, 246);
+  font-weight: 500;
+}
+.header .menu .active {
+  background-color: rgb(236, 101, 157);
+  color: rgb(249, 246, 246);
+}
+
+.hero {
+  transform: translateY(-60px);
+  position: relative;
+  z-index: 1;
+  height: 90vh;
+  background: url(../../img/bg-hero.jpg) no-repeat left 40px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero .container {
+  display: flex;
+  justify-content: flex-end;
+}
+.hero .container .form {
+  width: 280px !important;
+  height: 267px;
+  flex-shrink: 0;
+  margin-top: 100px;
+  width: 30%;
+  position: relative;
+  z-index: 5;
+}
+.hero .container .form #myTab .nav-item {
+  width: 50%;
+}
+.hero .container .form #myTab .nav-link {
+  border-color: transparent;
+  background-color: rgb(249, 246, 246);
+  width: 100%;
+  font-size: 0.8em;
+  color: rgb(103, 110, 128);
+}
+.hero .container .form #myTab .nav-link.active {
+  background-color: rgb(236, 101, 157) !important;
+  color: rgb(249, 246, 246) !important;
+}
+.hero .container .form .tab-content {
+  background-color: rgba(103, 110, 128, 0.6);
+  margin-top: 0 !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 0.9em;
+}
+.hero .container .form .tab-content input {
+  font-size: 0.8em;
+}
+
+@media (width <= 992px) {
+  .header .top-header div {
+    display: none;
+  }
+  .header .top-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 0;
+    padding-bottom: 1em;
+  }
+  .header .top-main .col-lg-1 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .header .top-main div:nth-child(2),
+  .header .top-main div:nth-child(3),
+  .header .top-main div:nth-child(4),
+  .header .top-main div:nth-child(5),
+  .header .top-main div:nth-child(6),
+  .header .top-main div:nth-child(7) {
+    display: none;
+  }
+  .header .top-main .border-end {
+    border-right: none !important;
+    height: auto;
+  }
+  .header .top-main .border-end img {
+    margin-right: 0;
+  }
+  .header .menu {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+  }
+  .header .menu .w-100 {
+    width: auto !important;
+  }
+  .hero {
+    transform: translateY(-10px);
+    background-position: top center;
+  }
+  .hero .container {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
