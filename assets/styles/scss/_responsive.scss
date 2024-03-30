@@ -1,5 +1,6 @@
 // header
 @media (width <= 992px){
+    // header
     .header{
         .top-header{
             div{
@@ -49,7 +50,7 @@
     .hero{
         background: url(../../img/bg-hero-mobile.jpg) top center no-repeat;
         transform: translateY(0);
-        // background-position: top center;
+        background-size: cover;
         height: 80vh;
         .container{
             display: flex;
@@ -60,6 +61,7 @@
             }
         }
     }
+    // mobile top
     .mobile-top{
         display: block;
         padding: 0 30px;
@@ -83,6 +85,21 @@
             }
             .btn-primary{
                 width: 100%;
+            }
+        }
+    }
+    // our fleet
+    .our-fleet{
+        h1{
+            transform: translateX(0);
+        }
+        .multiple-items{
+            box-sizing: border-box;
+            .slick-prev{
+                transform: translateX(30px);
+            }
+            .slick-next{
+                transform: translateX(-30px);
             }
         }
     }

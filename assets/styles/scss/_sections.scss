@@ -8,29 +8,27 @@
     h1{
         transform: translateY(-30px);
     }
-    .carousel{
-        .carousel-control-prev-icon{
-            background-image:url(../../img/arrow-left-circle-fill.svg) ;
-            transform: translateX(-30px);
-        }
-        .carousel-control-next-icon{
-            background-image: url(../../img/arrow-right-circle-fill.svg);
-            transform: translateX(30px);
+    .multiple-items{
+        box-sizing: border-box;
+        .slick-prev,
+        .slick-next {
+            display: block; 
+            &::before{
+                color: $mainColor;
+            }
         }
         img[src$=".svg"]{
             width: 16px;
         }
-        img{
-            width: 100%;
-        }
         figure{
             border:solid 1px $mainColor;
-            width: 20%;
-            margin-right: .8em;
             padding-bottom: 1em;
             border-radius: 2px;
-            &:last-child{
-                margin-right: 0;
+            padding: .8em 1em;
+            box-sizing: border-box;
+            margin: 0 20px;
+            img{
+                width: 100%;
             }
             figcaption{
                 background-color: $deepPink;
@@ -40,7 +38,6 @@
                 margin-bottom: .8em;
             }
         }
-        
     }
 }
 // video Buenos Aires city
