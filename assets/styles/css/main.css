@@ -63,6 +63,21 @@ h3 {
   font-weight: 600;
 }
 
+.text-pink {
+  color: rgb(236, 101, 157);
+}
+
+.text-main {
+  font-family: "frutigerlight_cn";
+}
+
+.text-secondary {
+  font-family: "Encode Sans", sans-serif;
+  color: rgb(103, 110, 128);
+  margin-bottom: 0;
+  font-size: 0.9em !important;
+}
+
 .header .row {
   margin: 0;
 }
@@ -178,7 +193,8 @@ h3 {
 .our-fleet {
   color: rgb(103, 110, 128);
 }
-.our-fleet h1 {
+.our-fleet h2,
+.our-fleet p {
   transform: translateY(-30px);
 }
 .our-fleet .multiple-items {
@@ -206,10 +222,14 @@ h3 {
 .our-fleet .multiple-items figure img {
   width: 100%;
 }
+.our-fleet .multiple-items figure p {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
 .our-fleet .multiple-items figure figcaption {
   background-color: rgb(236, 101, 157);
   color: rgb(249, 246, 246);
-  width: 60%;
+  width: 50%;
   padding: 0.4em;
   margin-bottom: 0.8em;
 }
@@ -256,6 +276,27 @@ h3 {
   display: block;
   margin: auto;
   font-size: 1.2em;
+}
+
+.fares .accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+.fares .accordion h3 {
+  font-size: 1em;
+  font-weight: 400;
+  color: rgb(236, 101, 157);
+}
+.fares .accordion ul li {
+  list-style-type: disc;
+  color: rgb(103, 110, 128);
+  font-size: 0.9em;
+}
+.fares .accordion .accordion-item {
+  border: solid 1px rgb(236, 101, 157);
+  margin-bottom: 0.3em;
+}
+.fares .accordion .accordion-item .accordion-button {
+  text-transform: uppercase;
 }
 
 @media (width <= 992px) {
