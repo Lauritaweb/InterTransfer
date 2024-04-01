@@ -442,8 +442,13 @@ footer p {
     width: 50%;
     background-color: white;
   }
-  .header .menu .collapse:not(.show) {
-    display: block;
+  .header .menu .navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .header .menu .navbar-collapse.show ul {
+    margin-top: 1rem;
   }
   .header .menu ul li {
     text-align: right;

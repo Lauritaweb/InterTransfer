@@ -42,9 +42,17 @@
             height: 100%;
             width: 50%;
             background-color: white;
-            .collapse:not(.show){
-                display: block;
-            }
+            .navbar-collapse {
+                &.show {
+                  display: flex; // Muestra la navbar cuando está abierta
+                  flex-direction: column;
+                  align-items: flex-end;
+            
+                  ul {
+                    margin-top: 1rem; // Añade un margen superior para separar los enlaces
+                  }
+                }
+              }
             ul{
                 li{
                     text-align: right;
