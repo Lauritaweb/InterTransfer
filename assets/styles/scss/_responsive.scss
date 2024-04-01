@@ -42,8 +42,33 @@
             height: 100%;
             width: 50%;
             background-color: white;
+            .collapse:not(.show){
+                display: block;
+            }
+            ul{
+                li{
+                    text-align: right;
+                    width: auto;
+                    border-bottom: solid .5px $mainColor;
+                    a{
+                        color: $mainColor;
+                        padding: .6em;
+                        font-size: .8em;
+                        &.active{
+                            background-color: transparent;
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
             .w-100{
                 width: auto!important;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                button{
+                    margin-bottom: 10px;
+                }
             }
         }
     }
@@ -90,7 +115,8 @@
     }
     // our fleet
     .our-fleet{
-        h1{
+        h2,
+        p{
             transform: translateX(0);
         }
         .multiple-items{
@@ -102,6 +128,12 @@
                 transform: translateX(-30px);
             }
         }
+    }
+    // banner plane
+    .banner-plane{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 

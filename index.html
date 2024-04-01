@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
-    <header class="container header">
+    <header class="container header" id="top">
         <div class="top-header border-bottom d-flex justify-content-between align-items-center">
             <h1 class="fs-6 fw-light text-secondary">Translados al aeropuerto en Buenos Aires</h1>
             <div>
@@ -27,7 +27,9 @@
         </div><!-- ends top header -->
         <div class="top-main row">
             <div class="col-lg-1 border-end">
+              <a href="index.html">
                 <img src="./assets/img/logo-inter-transfer.svg" alt="Logo de Inter Transfer" class="brand">
+              </a>
             </div><!-- ends box1 -->
             <div class="col-lg-2 border-end">
                 <img src="./assets/img/icon-clock.svg" alt="Reloj">
@@ -61,19 +63,19 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#top">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Tarifas</a>
+                        <a class="nav-link" href="#tarifas">Tarifas</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Reservar</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Flota</a>
+                        <a class="nav-link" href="#flota">Flota</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Preguntas frecuentes</a>
+                        <a class="nav-link" href="#preguntas-frecuentes">Preguntas frecuentes</a>
                       </li>
                     </ul>
                   </div>
@@ -155,7 +157,7 @@
           <a href="#" class="btn-primary">RESERVAR</a>
       </div><!-- ends box7 -->
     </section><!-- ends mobile top -->
-    <section class="our-fleet">
+    <section class="our-fleet" id="flota">
       <div class="container">
         <h2 class="text-uppercase text-center fs-3">Nuestra flota</h2>
         <p class="text-center px-5 container">Explora nuestra flota de vehículos modernos y confortables en Inter  Transfer. Desde sedanes elegantes hasta espaciosas SUVs, tenemos la  opción perfecta para satisfacer tus necesidades de transporte al  aeropuerto en Buenos Aires. Viaja con estilo y seguridad con nosotros.</p>
@@ -257,7 +259,7 @@
       </div>
     </section><!-- ends banners -->
     <!-- starts fares -->
-    <section class="fares container mb-5">
+    <section class="fares container mb-5" id="tarifas">
       <h2 class="text-uppercase text-center fs-3 mt-3">Tarifas</h2>
       <!-- starts accordion -->
       <div class="accordion" id="accordionFares">
@@ -1023,7 +1025,7 @@
       </div>
     </section>
     <!-- ends carousel banners -->
-    <section class="py-3 faqs container">
+    <section class="py-3 faqs container" id="preguntas-frecuentes">
       <h2 class="text-uppercase text-center fs-3 mt-3">Preguntas frecuentes</h2>
       <h3 class="text-pink">Reservas</h3>
       <!-- starts accordion -->
@@ -1226,6 +1228,10 @@
     <footer class="py-2 text-center mt-3">
       <p>Copyright © 2024 - Inter Transfer -Todos los derechos reservados</p>
     </footer>
+    <!-- whatsapp -->
+    <div class="whatsapp-buble">
+      <img src="./assets/img/whatsapp.svg" alt="Hace tu reserva por whatsapp">
+    </div>
     <!-- Js -->
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
