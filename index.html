@@ -1238,5 +1238,32 @@
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/slick.js"></script>
+    <script>
+      // JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggleBtn = document.getElementById('navbarToggleBtn');
+        const navbarLinks = document.querySelectorAll('.nav-link');
+
+        // Cerrar la navbar al hacer clic en un enlace
+        navbarLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            if (navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+              navbarToggleBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+
+        // Agregar y quitar clase activa al enlace seleccionado
+        navbarLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            navbarLinks.forEach(link => link.classList.remove('active'));
+            link.classList.add('active');
+          });
+        });
+      });
+
+    </script>
 </body>
 </html>
