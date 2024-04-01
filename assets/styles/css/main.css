@@ -182,6 +182,10 @@ h3 {
   border-bottom-right-radius: 10px;
   font-size: 0.9em;
 }
+.hero .container .form .tab-content label {
+  color: rgb(249, 246, 246);
+  font-weight: 500;
+}
 .hero .container .form .tab-content input {
   font-size: 0.8em;
 }
@@ -278,10 +282,15 @@ h3 {
   font-size: 1.2em;
 }
 
+.fares p {
+  color: rgb(103, 110, 128);
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
 .fares .accordion-button:not(.collapsed) {
   background-color: transparent;
 }
-.fares .accordion h3 {
+.fares .accordion h4 {
   font-size: 1em;
   font-weight: 400;
   color: rgb(236, 101, 157);
@@ -297,6 +306,85 @@ h3 {
 }
 .fares .accordion .accordion-item .accordion-button {
   text-transform: uppercase;
+  color: rgb(103, 110, 128);
+}
+
+.banners h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  line-height: normal;
+}
+.banners .carousel-caption {
+  transform: translateY(-100px);
+}
+.banners .carousel-caption .btn-primary {
+  width: 350px;
+  display: block;
+  margin: auto;
+}
+
+.faqs .accordion-button {
+  color: rgb(103, 110, 128);
+}
+.faqs .accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+.faqs p {
+  font-size: 0.9em;
+  color: rgb(103, 110, 128);
+  line-height: 1.6em;
+}
+
+.banner-plane {
+  height: 50vh;
+  background: url(../../img/banner-plane.jpg) top center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-plane h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 10px;
+}
+.banner-plane .btn-primary {
+  width: 200px;
+}
+
+.about-us p {
+  color: rgb(103, 110, 128);
+  font-size: 0.9em;
+  line-height: 1.4em;
+  font-weight: 300;
+}
+.about-us ul {
+  list-style: none;
+}
+.about-us ul li {
+  margin-right: 10px;
+  color: rgb(103, 110, 128);
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+.about-us article:last-child img {
+  width: 150px !important;
+}
+
+footer {
+  background-color: rgb(103, 110, 128);
+}
+footer p {
+  color: rgb(249, 246, 246);
+  font-size: 0.7em;
+  margin: 0;
 }
 
 @media (width <= 992px) {
