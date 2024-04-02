@@ -198,6 +198,9 @@
       color: $mainColor;
       font-size: .8em;
       margin-bottom: 10px;
+      &:first-child{
+        transform: translateX(-1px);
+      }
     }
   }
   article:last-child{

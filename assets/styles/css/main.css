@@ -379,6 +379,9 @@ h3 {
   font-size: 0.8em;
   margin-bottom: 10px;
 }
+.about-us ul li:first-child {
+  transform: translateX(-1px);
+}
 .about-us article:last-child img {
   width: 150px !important;
 }
