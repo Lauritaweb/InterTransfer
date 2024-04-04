@@ -221,7 +221,10 @@ h3 {
   border-radius: 2px;
   padding: 0.8em 1em;
   box-sizing: border-box;
-  margin: 0 20px;
+  margin: 0 5px;
+}
+.our-fleet .multiple-items figure span.fs-6.fw-light {
+  font-weight: 500 !important;
 }
 .our-fleet .multiple-items figure img {
   width: 100%;

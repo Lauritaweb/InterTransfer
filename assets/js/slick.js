@@ -1,7 +1,7 @@
 $(document).ready(function(){
 $('.slider').slick({
       infinite: true,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
       prevArrow: '<button type="button" class="slick-prev">Previous</button>',
       nextArrow: '<button type="button" class="slick-next">Next</button>'
@@ -11,7 +11,7 @@ $('.slider').slick({
   dots: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   responsive: [
     {
