@@ -114,7 +114,7 @@ h3 {
   margin-right: 0.4em;
 }
 .header .top-main .brand {
-  width: 80px;
+  width: 70px;
   margin-top: 5px;
 }
 .header .menu {
@@ -530,10 +530,16 @@ footer p {
     box-sizing: border-box;
   }
   .our-fleet .multiple-items .slick-prev {
-    transform: translateX(30px);
+    transform: translateX(20px);
+  }
+  .our-fleet .multiple-items .slick-prev::before {
+    font-size: 40px;
   }
   .our-fleet .multiple-items .slick-next {
-    transform: translateX(-30px);
+    transform: translateX(-20px);
+  }
+  .our-fleet .multiple-items .slick-next::before {
+    font-size: 40px;
   }
   .banner-plane {
     flex-direction: column;

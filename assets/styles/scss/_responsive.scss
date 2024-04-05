@@ -130,10 +130,16 @@
         .multiple-items{
             box-sizing: border-box;
             .slick-prev{
-                transform: translateX(30px);
+                transform: translateX(20px);
+                &::before{
+                    font-size: 40px;
+                }
             }
             .slick-next{
-                transform: translateX(-30px);
+                transform: translateX(-20px);
+                &::before{
+                    font-size: 40px;
+                }
             }
         }
     }
