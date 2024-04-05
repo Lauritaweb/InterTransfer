@@ -88,6 +88,9 @@ h3 {
   padding: 0.4em 0;
   color: rgb(103, 110, 128);
 }
+.header .top-header a {
+  text-decoration: none;
+}
 .header .top-header p {
   margin-bottom: 0;
   font-size: 0.8em;

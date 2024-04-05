@@ -8,6 +8,9 @@
     .top-header{
         padding: .4em 0;
         color:$mainColor;
+        a{
+            text-decoration: none;
+        }
         p{
             margin-bottom: 0;
             font-size: .8em;
