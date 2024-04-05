@@ -81,7 +81,7 @@
         }
     }
     .hero{
-        background: url(../../img/bg-hero-mobile.jpg) top center no-repeat;
+        background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
         transform: translateY(0);
         background-size: cover;
         height: 80vh;
@@ -129,16 +129,35 @@
         }
         .multiple-items{
             box-sizing: border-box;
+            figure{
+                border:transparent solid 1px;
+                figcaption{
+                    margin-left: 30px;
+                    &+span{
+                        padding-left: 30px;
+                        &+div{
+                            padding-left: 30px;
+                            &+div{
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+                }
+            }
             .slick-prev{
                 transform: translateX(20px);
                 &::before{
                     font-size: 40px;
+                    position: relative;
+                    z-index: 5;
                 }
             }
             .slick-next{
-                transform: translateX(-20px);
+                transform: translateX(-40px);
                 &::before{
                     font-size: 40px;
+                    position: relative;
+                    z-index: 5;
                 }
             }
         }
