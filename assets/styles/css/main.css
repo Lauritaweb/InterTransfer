@@ -409,7 +409,7 @@ footer p {
 
 .whatsapp-buble {
   position: fixed;
-  right: 10px;
+  right: 15px;
   bottom: 10px;
   z-index: 200;
 }
