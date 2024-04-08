@@ -1,6 +1,8 @@
 // imports
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
 @import "_base";
+@import "_animations";
 @import "header";
 @import "_sections";
 @import "_responsive";

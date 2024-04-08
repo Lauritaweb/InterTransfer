@@ -88,9 +88,9 @@
         .container{
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             .form{
-                margin-top: 0;
+                margin-top:20px;
             }
         }
     }

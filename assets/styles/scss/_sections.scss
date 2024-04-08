@@ -5,10 +5,10 @@
 // our fleet
 .our-fleet{
     color:$mainColor;
-    h2,
-    p{
-        transform: translateY(-30px);
-    }
+    // h2,
+    // p{
+    //     transform: translateY(-30px);
+    // }
     .multiple-items{
         box-sizing: border-box;
         .slick-prev,
@@ -18,38 +18,38 @@
                 color: $mainColor;
             }
         }
-        img[src$=".svg"]{
-            width: 16px;
-        }
         figure{
-            border:solid 1px $mainColor;
-            padding-bottom: 1em;
-            border-radius: 2px;
-            padding: .8em 1em;
-            box-sizing: border-box;
-            margin: 0 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
+          border:solid 1px $mainColor;
+          padding-bottom: 1em;
+          border-radius: 2px;
+          padding: .8em 1em;
+          box-sizing: border-box;
+          margin: 0 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
             span.fs-6.fw-light{
               font-weight: 500!important;
             }
             img{
-                width: 200px;
-                display: block;
-                margin: auto;
+              width: 200px;
+              display: block;
+              margin: auto;
+            }
+            img.w-16{
+                width: 16px!important;
             }
             p{
               margin-bottom: 1em;
               margin-top: 0;
             }
             figcaption{
-                background-color: $deepPink;
-                color: $white;
-                width: 50%;
-                padding: .4em;
-                margin-bottom: .8em;
+              background-color: $deepPink;
+              color: $white;
+              width: 50%;
+              padding: .4em;
+              margin-bottom: .8em;
             }
         }
     }

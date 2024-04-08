@@ -11,15 +11,13 @@
     <meta name="geo.placename" content="Buenos Aires">
     <meta name="google-site-verification" content="6_OLU6Iai9Abw7KrUcPIcNP_GTbUpvHFkc-ZsYbLulc" />
     <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
-    <!-- css BS -->
-    <link href="./assets/styles/css/bootstrap.min.css" rel="stylesheet">
     <!-- main css -->
     <link rel="stylesheet" href="./assets/styles/css/main.css">
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
-<body>
+<body class="fade-in">
     <header class="container header" id="top">
         <div class="top-header border-bottom d-flex justify-content-between align-items-center">
             <h1 class="fs-6 fw-light text-secondary">Translados al aeropuerto en Buenos Aires</h1>
@@ -59,7 +57,7 @@
                 <span>Sillitas para bebés</span>
             </div><!-- ends box6 -->
             <div class="col-lg-1">
-                <a href="https://wa.me/+541134875549" class="btn-primary">Reservar</a>
+                <a href="https://wa.me/+541134875549" class="btn-primary puff-in-center">Reservar</a>
             </div><!-- ends box7 -->
             <!-- starts navbar -->
             <nav class="navbar navbar-expand-lg menu">
@@ -76,7 +74,7 @@
                         <a class="nav-link" href="#tarifas">Tarifas</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Reservar</a>
+                        <a class="nav-link" href="https://wa.me/+54113487554">Reservar</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#flota">Flota</a>
@@ -93,7 +91,7 @@
     <!-- starts hero -->
     <section class="hero">
       <div class="container">
-        <div class="form">
+        <div class="form bounce-in-top">
           <!-- tabs -->
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -105,29 +103,29 @@
           </ul><!-- ends tabs -->
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-              <form class="p-3">
+              <form class="p-3" id="direccionForm">
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Desde</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="desdeInput" class="form-label">Desde</label>
+                  <input type="text" class="form-control" id="desdeInput" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Hasta</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1">
+                  <label for="hastaInput" class="form-label">Hasta</label>
+                  <input type="text" class="form-control" id="hastaInput">
                 </div>
-                <button type="submit" class="btn-primary">Reservar</button>
+                <button type="button" class="btn-primary" onclick="enviarWhatsapp()">Reservar</button>
               </form>
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-              <form class="p-3">
+              <form class="p-3" id="fechaHoraForm">
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Fecha</label>
-                  <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="fechaInput" class="form-label">Fecha</label>
+                  <input type="date" class="form-control" id="fechaInput" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Hora</label>
-                  <input type="time" class="form-control" id="exampleInputPassword1">
+                  <label for="horaInput" class="form-label">Hora</label>
+                  <input type="time" class="form-control" id="horaInput">
                 </div>
-                <button type="submit" class="btn-primary">Reservar</button>
+                <button type="button" class="btn-primary" onclick="enviarWhatsapp()">Reservar</button>
               </form>
             </div>
           </div><!-- ends tab-content -->
@@ -169,7 +167,7 @@
     <section class="our-fleet" id="flota">
       <div class="container">
         <h2 class="text-uppercase text-center fs-3">Nuestra flota</h2>
-        <p class="text-center px-5 container">Descubre nuestra moderna y cómoda flota de vehículos en Inter Transfer. Desde elegantes sedanes hasta amplias vans, tenemos la opción ideal para tus traslados al aeropuerto en Buenos Aires. Viaja con estilo y seguridad con nosotros, ya que todos nuestros vehículos están habilitados y cuentan con seguro de pasajeros.</p>
+        <p class="text-center px-5 container">Descubre nuestra moderna y cómoda flota de vehículos en Inter Transfer. Desde elegantes sedanes hasta minibuses, tenemos la opción ideal para tus traslados al aeropuerto en Buenos Aires. Viaja con estilo y seguridad con nosotros, ya que todos nuestros vehículos están habilitados y cuentan con seguro de pasajeros.</p>
       </div>
       <!-- starts slick -->
       <div class="slider multiple-items container">
@@ -178,11 +176,11 @@
             <figcaption>Urbano</figcaption>
             <span class="fs-6 fw-light">Fiat Cronos</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16">
                3 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
                2 x 23kg - 1 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 1 -->
@@ -191,11 +189,11 @@
             <figcaption>Urbano</figcaption>
             <span class="fs-6 fw-light">Renault Logan</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16">
                3 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
                2 x 23kg - 1 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 2 -->
@@ -217,11 +215,11 @@
             <figcaption>Ejecutivo</figcaption>
             <span class="fs-6 fw-light">Toyota Corolla</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16">
                3 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
                2 x 23kg - 1 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 4 -->
@@ -230,11 +228,11 @@
             <figcaption>Ejecutivo</figcaption>
             <span class="fs-6 fw-light">Volkswagen Virtus</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16">
                3 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
                2 x 23kg - 1 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 5 -->
@@ -243,11 +241,11 @@
             <figcaption>Ejecutivo</figcaption>
             <span class="fs-6 fw-light">Ford focus</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1" >
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16" >
                3 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
                2 x 23kg - 1 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 6 -->
@@ -256,11 +254,11 @@
             <figcaption>Utilitario</figcaption>
             <span class="fs-6 fw-light">Renault New Kangoo</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16" >
                4 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
               4 x 23kg - 4 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 7 -->
@@ -269,11 +267,11 @@
             <figcaption>Utilitario</figcaption>
             <span class="fs-6 fw-light">Partner Patagonia</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16" >
                4 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
               4 x 23kg - 4 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 8 -->
@@ -282,11 +280,11 @@
             <figcaption>Van</figcaption>
             <span class="fs-6 fw-light">Mercedes Vito</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1" >
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16">
                7 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
               6 x 23kg - 4 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 9 -->
@@ -295,11 +293,11 @@
             <figcaption>Van</figcaption>
             <span class="fs-6 fw-light">Toyota Hiace</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16" >
                7 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
               6 x 23kg - 4 Carry On
             </div><!-- ends luggage -->
           </figure><!-- ends car 10 -->
@@ -308,11 +306,11 @@
             <figcaption>Minibus</figcaption>
             <span class="fs-6 fw-light">Mercedes Benz Sprinter</span>
             <div class="d-flex align-items-center">
-              <img src="./assets/img/people.svg" alt="" class="me-1">
+              <img src="./assets/img/people.svg" alt="" class="me-1 w-16">
               11 - 14 pasajeros
             </div><!-- ends passenger -->
             <div class="d-flex align-items-center">
-              <img src="./assets/img/suitcase.svg" alt="">
+              <img src="./assets/img/suitcase.svg" alt="" class="w-16">
                Consultar
             </div><!-- ends luggage -->
           </figure><!-- ends car 11 -->
@@ -351,7 +349,7 @@
                   <ul>
                     <li>Auto urbano $34.110</li>
                     <li>Auto ejecutivo $40.500</li>
-                    <li>Nueva Kangoo $50.130</li>
+                    <li>Nueva Kango / utilitario $50.130</li>
                      
                     <li>Mercedes Benz Vito $83.790</li>
                     <li>Hiace/Sprinter $108.810</li>
@@ -360,14 +358,14 @@
                   <ul>
                     <li>Auto urbano $35.460</li>
                     <li>Auto ejecutivo $42.120</li>
-                    <li>Nueva Kangoo $52.200</li>
+                    <li>Nueva Kango / utilitario $52.200</li>
                     <li>Hiace/Sprinter $113.130</li>
                   </ul>                
                   <h4>Wilde / Monte Chingolo</h4>
                   <ul>
                     <li>Auto urbano $40.650</li>
                     <li>Auto ejecutivo $48.840</li>
-                    <li>Nueva Kangoo $64.170</li>
+                    <li>Nueva Kango / utilitario $64.170</li>
                     <li>Mercedes Benz Vito $107.280</li>
                     <li>Hiace/Sprinter $139.230</li>
                   </ul>
@@ -375,7 +373,7 @@
                   <ul>
                     <li>Auto urbano $45.270</li>
                     <li>Auto ejecutivo $53.250</li>
-                    <li>Nueva Kangoo $69.570</li>
+                    <li>Nueva Kango / utilitario $69.570</li>
                     <li>Mercedes Benz Vito $116.190</li>
                     <li>Hiace/Sprinter $150.840</li>
                   </ul>  
@@ -383,7 +381,7 @@
                   <ul>
                     <li>Auto urbano $58.140</li>
                     <li>Auto ejecutivo $69.210</li>
-                    <li>Nueva Kangoo $85.590</li>
+                    <li>Nueva Kango / utilitario $85.590</li>
                     <li>Mercedes Benz Vito $142.590</li>
                     <li>Hiace/Sprinter $185.670</li>
                   </ul>
@@ -391,7 +389,7 @@
                   <ul>
                     <li>Auto urbano $36.360</li>
                     <li>Auto ejecutivo $43.200</li>
-                    <li>Nueva Kangoo $53.460</li>
+                    <li>Nueva Kango / utilitario $53.460</li>
                     <li>Mercedes Benz Vito $89.370</li>
                     <li>Hiace/Sprinter $116.010</li>
                   </ul>
@@ -399,7 +397,7 @@
                   <ul>
                     <li>Auto urbano $38.160</li>
                     <li>Auto ejecutivo $45.360</li>
-                    <li>Nueva Kangoo $56.160</li>
+                    <li>Nueva Kango / utilitario $56.160</li>
                     <li>Mercedes Benz Vito $93.870</li>
                     <li>Hiace/Sprinter $121.860</li>
                   </ul>
@@ -407,7 +405,7 @@
                   <ul>
                     <li>Auto urbano $34.110</li>
                     <li>Auto ejecutivo $40.500</li>
-                    <li>Nueva Kangoo $50.130</li>
+                    <li>Nueva Kango / utilitario $50.130</li>
                     <li>Mercedes Benz Vito $83.790</li>
                     <li>Hiace/Sprinter $108.810</li>
                   </ul>
@@ -415,7 +413,7 @@
                   <ul>
                     <li>Auto urbano $42.750</li>
                     <li>Auto ejecutivo $50.760</li>
-                    <li>Nueva Kangoo $62.820</li>
+                    <li>Nueva Kango / utilitario $62.820</li>
                     <li>Mercedes Benz Vito $104.430</li>
                     <li>Hiace/Sprinter $135.450</li>
                   </ul>  
@@ -423,7 +421,7 @@
                   <ul>
                     <li>Auto urbano $77.310</li>
                     <li>Auto ejecutivo $91.890</li>
-                    <li>Nueva Kangoo $113.670</li>
+                    <li>Nueva Kango / utilitario $113.670</li>
                     <li>Mercedes Benz Vito $189.990</li>
                     <li>Hiace/Sprinter $246.600</li>
                   </ul>                 
@@ -434,7 +432,7 @@
                   <ul>
                     <li>Auto urbano $59.130</li>
                     <li>Auto ejecutivo $70.230</li>
-                    <li>Nueva Kangoo $87.000</li>
+                    <li>Nueva Kango / utilitario $87.000</li>
                     <li>Mercedes Benz Vito $144.270</li>
                     <li>Hiace/Sprinter $188.550</li>
                   </ul>
@@ -443,7 +441,7 @@
                   <ul>
                     <li>Auto urbano $57.240</li>
                     <li>Auto ejecutivo $68.130</li>
-                    <li>Nueva Kangoo $84.240</li>
+                    <li>Nueva Kango / utilitario $84.240</li>
                     <li>Mercedes Benz Vito $140.760</li>
                     <li>Hiace/Sprinter $182.700</li>
                   </ul>
@@ -452,7 +450,7 @@
                   <ul>
                     <li>Auto urbano $66.330</li>
                     <li>Auto ejecutivo $78.930</li>
-                    <li>Nueva Kangoo $97.650</li>
+                    <li>Nueva Kango / utilitario $97.650</li>
                     <li>Mercedes Benz Vito $163.170</li>
                     <li>Hiace/Sprinter $212.670</li>
                   </ul>
@@ -461,7 +459,7 @@
                   <ul>
                     <li>Auto urbano $77.310</li>
                     <li>Auto ejecutivo $91.890</li>
-                    <li>Nueva Kangoo $113.670</li>
+                    <li>Nueva Kango / utilitario $113.670</li>
                     <li>Mercedes Benz Vito $189.990</li>
                     <li>Hiace/Sprinter $246.600</li>
                   </ul>
@@ -470,7 +468,7 @@
                   <ul>
                     <li>Auto urbano $50.940</li>
                     <li>Auto ejecutivo $60.330</li>
-                    <li>Nueva Kangoo $74.520</li>
+                    <li>Nueva Kango / utilitario $74.520</li>
                     <li>Mercedes Benz Vito $124.200</li>
                     <li>Hiace/Sprinter $161.650</li>
                   </ul>
@@ -479,7 +477,7 @@
                   <ul>
                     <li>Auto urbano $35.460</li>
                     <li>Auto ejecutivo $42.120</li>
-                    <li>Nueva Kangoo $52.200</li>
+                    <li>Nueva Kango / utilitario $52.200</li>
                     <li>Mercedes Benz Vito $87.120</li>
                     <li>Hiace/Sprinter $113.130</li>
                   </ul>
@@ -488,7 +486,7 @@
                   <ul>
                     <li>Auto urbano $38.160</li>
                     <li>Auto ejecutivo $45.360</li>
-                    <li>Nueva Kangoo $56.160</li>
+                    <li>Nueva Kango / utilitario $56.160</li>
                     <li>Mercedes Benz Vito $93.870</li>
                     <li>Hiace/Sprinter $121.860</li>
                   </ul>
@@ -497,7 +495,7 @@
                   <ul>
                     <li>Auto urbano $38.160</li>
                     <li>Auto ejecutivo $45.360</li>
-                    <li>Nueva Kangoo $56.160</li>
+                    <li>Nueva Kango / utilitario $56.160</li>
                     <li>Mercedes Benz Vito $93.870</li>
                     <li>Hiace/Sprinter $121.860</li>
                   </ul>
@@ -506,7 +504,7 @@
                   <ul>
                     <li>Auto urbano $41.850</li>
                     <li>Auto ejecutivo $49.500</li>
-                    <li>Nueva Kangoo $61.560</li>
+                    <li>Nueva Kango / utilitario $61.560</li>
                     <li>Mercedes Benz Vito $102.780</li>
                     <li>Hiace/Sprinter $133.470</li>
                   </ul>
@@ -515,7 +513,7 @@
                   <ul>
                     <li>Auto urbano $45.450</li>
                     <li>Auto ejecutivo $54.090</li>
-                    <li>Nueva Kangoo $67.320</li>
+                    <li>Nueva Kango / utilitario $67.320</li>
                     <li>Mercedes Benz Vito $112.770</li>
                     <li>Hiace/Sprinter $146.070</li>
                   </ul>
@@ -526,7 +524,7 @@
                   <ul>
                     <li>Auto urbano $45.450</li>
                     <li>Auto ejecutivo $54.090</li>
-                    <li>Nueva Kangoo $67.320</li>
+                    <li>Nueva Kango / utilitario $67.320</li>
                     <li>Mercedes Benz Vito $112.770</li>
                     <li>Hiace/Sprinter $146.070</li>
                   </ul>
@@ -535,7 +533,7 @@
                   <ul>
                     <li>Auto urbano $52.740</li>
                     <li>Auto ejecutivo $62.730</li>
-                    <li>Nueva Kangoo $77.040</li>
+                    <li>Nueva Kango / utilitario $77.040</li>
                     <li>Mercedes Benz Vito $128.160</li>
                     <li>Hiace/Sprinter $166.410</li>
                   </ul>
@@ -544,7 +542,7 @@
                   <ul>
                     <li>Auto urbano $41.850</li>
                     <li>Auto ejecutivo $49.500</li>
-                    <li>Nueva Kangoo $61.560</li>
+                    <li>Nueva Kango / utilitario $61.560</li>
                     <li>Mercedes Benz Vito $102.780</li>
                     <li>Hiace/Sprinter $133.470</li>
                   </ul>
@@ -553,7 +551,7 @@
                   <ul>
                     <li>Auto urbano $58.140</li>
                     <li>Auto ejecutivo $69.030</li>
-                    <li>Nueva Kangoo $85.320</li>
+                    <li>Nueva Kango / utilitario $85.320</li>
                     <li>Mercedes Benz Vito $142.020</li>
                     <li>Hiace/Sprinter $184.890</li>
                   </ul>
@@ -562,7 +560,7 @@
                   <ul>
                     <li>Auto urbano $72.720</li>
                     <li>Auto ejecutivo $86.490</li>
-                    <li>Nueva Kangoo $106.920</li>
+                    <li>Nueva Kango / utilitario $106.920</li>
                     <li>Mercedes Benz Vito $178.740</li>
                     <li>Hiace/Sprinter $232.860</li>
                   </ul>
@@ -571,7 +569,7 @@
                   <ul>
                     <li>Auto urbano $36.360</li>
                     <li>Auto ejecutivo $43.200</li>
-                    <li>Nueva Kangoo $53.460</li>
+                    <li>Nueva Kango / utilitario $53.460</li>
                     <li>Mercedes Benz Vito $89.370</li>
                     <li>Hiace/Sprinter $116.910</li>
                   </ul>
@@ -580,7 +578,7 @@
                   <ul>
                     <li>Auto urbano $50.040</li>
                     <li>Auto ejecutivo $59.460</li>
-                    <li>Nueva Kangoo $73.560</li>
+                    <li>Nueva Kango / utilitario $73.560</li>
                     <li>Mercedes Benz Vito $122.820</li>
                     <li>Hiace/Sprinter $159.630</li>
                   </ul>
@@ -589,7 +587,7 @@
                   <ul>
                     <li>Auto urbano $38.160</li>
                     <li>Auto ejecutivo $45.360</li>
-                    <li>Nueva Kangoo $56.160</li>
+                    <li>Nueva Kango / utilitario $56.160</li>
                     <li>Mercedes Benz Vito $93.870</li>
                     <li>Hiace/Sprinter $121.860</li>
                   </ul>
@@ -598,7 +596,7 @@
                   <ul>
                     <li>Auto urbano $62.730</li>
                     <li>Auto ejecutivo $74.670</li>
-                    <li>Nueva Kangoo $92.340</li>
+                    <li>Nueva Kango / utilitario $92.340</li>
                     <li>Mercedes Benz Vito $154.710</li>
                     <li>Hiace/Sprinter $201.150</li>
                   </ul>
@@ -607,7 +605,7 @@
                   <ul>
                     <li>Auto urbano $89.100</li>
                     <li>Auto ejecutivo $106.290</li>
-                    <li>Nueva Kangoo $131.040</li>
+                    <li>Nueva Kango / utilitario $131.040</li>
                     <li>Mercedes Benz Vito $219.570</li>
                     <li>Hiace/Sprinter $284.310</li>
                   </ul>
@@ -635,7 +633,7 @@
                   <ul>
                     <li>Auto urbano $16,380</li>
                     <li>Auto ejecutivo $19,440</li>
-                    <li>Nueva Kangoo $24,030</li>
+                    <li>Nueva Kango / utilitario $24,030</li>
                     <li>Mercedes Benz Vito $40,230</li>
                     <li>Hiace/Sprinter $52,200</li>
                   </ul>
@@ -644,7 +642,7 @@
                   <ul>
                     <li>Auto urbano $34,110</li>
                     <li>Auto ejecutivo $40,500</li>
-                    <li>Nueva Kangoo $50,130</li>
+                    <li>Nueva Kango / utilitario $50,130</li>
                     <li>Mercedes Benz Vito $83,790</li>
                     <li>Hiace/Sprinter $108,810</li>
                   </ul>
@@ -653,7 +651,7 @@
                   <ul>
                     <li>Auto urbano $26,370</li>
                     <li>Auto ejecutivo $31,320</li>
-                    <li>Nueva Kangoo $38,790</li>
+                    <li>Nueva Kango / utilitario $38,790</li>
                     <li>Mercedes Benz Vito $64,800</li>
                     <li>Hiace/Sprinter $84,030</li>
                   </ul>
@@ -662,7 +660,7 @@
                   <ul>
                     <li>Auto urbano $29,700</li>
                     <li>Auto ejecutivo $35,640</li>
-                    <li>Nueva Kangoo $44,100</li>
+                    <li>Nueva Kango / utilitario $44,100</li>
                     <li>Mercedes Benz Vito $73,710</li>
                     <li>Hiace/Sprinter $95,760</li>
                   </ul>
@@ -671,7 +669,7 @@
                   <ul>
                     <li>Auto urbano $45,450</li>
                     <li>Auto ejecutivo $54,090</li>
-                    <li>Nueva Kangoo $66,870</li>
+                    <li>Nueva Kango / utilitario $66,870</li>
                     <li>Mercedes Benz Vito $111,780</li>
                     <li>Hiace/Sprinter $144,080</li>
                   </ul>
@@ -680,7 +678,7 @@
                   <ul>
                     <li>Auto urbano $36,360</li>
                     <li>Auto ejecutivo $43,200</li>
-                    <li>Nueva Kangoo $53,460</li>
+                    <li>Nueva Kango / utilitario $53,460</li>
                     <li>Mercedes Benz Vito $89,370</li>
                     <li>Hiace/Sprinter $116,910</li>
                   </ul>
@@ -689,7 +687,7 @@
                   <ul>
                     <li>Auto urbano $35,460</li>
                     <li>Auto ejecutivo $42,120</li>
-                    <li>Nueva Kangoo $52,200</li>
+                    <li>Nueva Kango / utilitario $52,200</li>
                     <li>Mercedes Benz Vito $87,120</li>
                     <li>Hiace/Sprinter $113,130</li>
                   </ul>
@@ -698,7 +696,7 @@
                   <ul>
                     <li>Auto urbano $37,260</li>
                     <li>Auto ejecutivo $44,280</li>
-                    <li>Nueva Kangoo $54,810</li>
+                    <li>Nueva Kango / utilitario $54,810</li>
                     <li>Mercedes Benz Vito $91,620</li>
                     <li>Hiace/Sprinter $118,890</li>
                   </ul>
@@ -707,7 +705,7 @@
                   <ul>
                     <li>Auto urbano $39,060</li>
                     <li>Auto ejecutivo $46,440</li>
-                    <li>Nueva Kangoo $57,510</li>
+                    <li>Nueva Kango / utilitario $57,510</li>
                     <li>Mercedes Benz Vito $96,120</li>
                     <li>Hiace/Sprinter $124,740</li>
                   </ul>
@@ -716,7 +714,7 @@
                   <ul>
                     <li>Auto urbano $50,940</li>
                     <li>Auto ejecutivo $60,570</li>
-                    <li>Nueva Kangoo $74,880</li>
+                    <li>Nueva Kango / utilitario $74,880</li>
                     <li>Mercedes Benz Vito $125,100</li>
                     <li>Hiace/Sprinter $162,450</li>
                   </ul>
@@ -725,7 +723,7 @@
                   <ul>
                     <li>Auto urbano $63,630</li>
                     <li>Auto ejecutivo $75,690</li>
-                    <li>Nueva Kangoo $93,600</li>
+                    <li>Nueva Kango / utilitario $93,600</li>
                     <li>Mercedes Benz Vito $156,420</li>
                     <li>Hiace/Sprinter $202,140</li>
                   </ul>
@@ -736,7 +734,7 @@
                   <ul>
                     <li>Auto urbano $20,880</li>
                     <li>Auto ejecutivo $24,840</li>
-                    <li>Nueva Kangoo $30,780</li>
+                    <li>Nueva Kango / utilitario $30,780</li>
                     <li>Mercedes Benz Vito $51,390</li>
                     <li>Hiace/Sprinter $66,390</li>
                   </ul>
@@ -745,7 +743,7 @@
                   <ul>
                     <li>Auto urbano $28,170</li>
                     <li>Auto ejecutivo $33,480</li>
-                    <li>Nueva Kangoo $41,490</li>
+                    <li>Nueva Kango / utilitario $41,490</li>
                     <li>Mercedes Benz Vito $69,300</li>
                     <li>Hiace/Sprinter $89,910</li>
                   </ul>
@@ -754,7 +752,7 @@
                   <ul>
                     <li>Auto urbano $31,470</li>
                     <li>Auto ejecutivo $37,920</li>
-                    <li>Nueva Kangoo $46,950</li>
+                    <li>Nueva Kango / utilitario $46,950</li>
                     <li>Mercedes Benz Vito $75,960</li>
                     <li>Hiace/Sprinter $98,640</li>
                   </ul>
@@ -763,7 +761,7 @@
                   <ul>
                     <li>Auto urbano $28,170</li>
                     <li>Auto ejecutivo $33,480</li>
-                    <li>Nueva Kangoo $41,490</li>
+                    <li>Nueva Kango / utilitario $41,490</li>
                     <li>Mercedes Benz Vito $69,300</li>
                     <li>Hiace/Sprinter $89,910</li>
                   </ul>
@@ -772,7 +770,7 @@
                   <ul>
                     <li>Auto urbano $39,060</li>
                     <li>Auto ejecutivo $46,440</li>
-                    <li>Nueva Kangoo $57,510</li>
+                    <li>Nueva Kango / utilitario $57,510</li>
                     <li>Mercedes Benz Vito $96,120</li>
                     <li>Hiace/Sprinter $124,740</li>
                   </ul>
@@ -781,7 +779,7 @@
                   <ul>
                     <li>Auto urbano $35,460</li>
                     <li>Auto ejecutivo $42,120</li>
-                    <li>Nueva Kangoo $52,200</li>
+                    <li>Nueva Kango / utilitario $52,200</li>
                     <li>Mercedes Benz Vito $87,120</li>
                     <li>Hiace/Sprinter $113,130</li>
                   </ul>
@@ -790,7 +788,7 @@
                   <ul>
                     <li>Auto urbano $46,350</li>
                     <li>Auto ejecutivo $55,170</li>
-                    <li>Nueva Kangoo $68,220</li>
+                    <li>Nueva Kango / utilitario $68,220</li>
                     <li>Mercedes Benz Vito $114,240</li>
                     <li>Hiace/Sprinter $148,860</li>
                   </ul>
@@ -799,7 +797,7 @@
                   <ul>
                     <li>Auto urbano $43,650</li>
                     <li>Auto ejecutivo $51,840</li>
-                    <li>Nueva Kangoo $63,570</li>
+                    <li>Nueva Kango / utilitario $63,570</li>
                     <li>Mercedes Benz Vito $106,800</li>
                     <li>Hiace/Sprinter $138,230</li>
                   </ul>
@@ -808,7 +806,7 @@
                   <ul>
                     <li>Auto urbano $49,050</li>
                     <li>Auto ejecutivo $58,410</li>
-                    <li>Nueva Kangoo $72,180</li>
+                    <li>Nueva Kango / utilitario $72,180</li>
                     <li>Mercedes Benz Vito $120,690</li>
                     <li>Hiace/Sprinter $156,600</li>
                   </ul>
@@ -817,7 +815,7 @@
                   <ul>
                     <li>Auto urbano $58,140</li>
                     <li>Auto ejecutivo $69,210</li>
-                    <li>Nueva Kangoo $85,590</li>
+                    <li>Nueva Kango / utilitario $85,590</li>
                     <li>Mercedes Benz Vito $142,010</li>
                     <li>Hiace/Sprinter $185,670</li>
                   </ul>
@@ -826,7 +824,7 @@
                   <ul>
                     <li>Auto urbano $70,920</li>
                     <li>Auto ejecutivo $84,330</li>
-                    <li>Nueva Kangoo $104,310</li>
+                    <li>Nueva Kango / utilitario $104,310</li>
                     <li>Mercedes Benz Vito $174,330</li>
                     <li>Hiace/Sprinter $226,260</li>
                   </ul>
@@ -837,7 +835,7 @@
                   <ul>
                     <li>Auto urbano $25,470</li>
                     <li>Auto ejecutivo $30,240</li>
-                    <li>Nueva Kangoo $37,440</li>
+                    <li>Nueva Kango / utilitario $37,440</li>
                     <li>Mercedes Benz Vito $62,550</li>
                     <li>Hiace/Sprinter $81,090</li>
                   </ul>
@@ -846,7 +844,7 @@
                   <ul>
                     <li>Auto urbano $21,780</li>
                     <li>Auto ejecutivo $25,920</li>
-                    <li>Nueva Kangoo $32,130</li>
+                    <li>Nueva Kango / utilitario $32,130</li>
                     <li>Mercedes Benz Vito $53,640</li>
                     <li>Hiace/Sprinter $69,660</li>
                   </ul>
@@ -855,7 +853,7 @@
                   <ul>
                     <li>Auto urbano $27,270</li>
                     <li>Auto ejecutivo $32,400</li>
-                    <li>Nueva Kangoo $40,140</li>
+                    <li>Nueva Kango / utilitario $40,140</li>
                     <li>Mercedes Benz Vito $66,750</li>
                     <li>Hiace/Sprinter $86,730</li>
                   </ul>
@@ -864,7 +862,7 @@
                   <ul>
                     <li>Auto urbano $29,970</li>
                     <li>Auto ejecutivo $35,280</li>
-                    <li>Nueva Kangoo $44,100</li>
+                    <li>Nueva Kango / utilitario $44,100</li>
                     <li>Mercedes Benz Vito $73,710</li>
                     <li>Hiace/Sprinter $95,160</li>
                   </ul>
@@ -873,7 +871,7 @@
                   <ul>
                     <li>Auto urbano $34,560</li>
                     <li>Auto ejecutivo $40,860</li>
-                    <li>Nueva Kangoo $50,850</li>
+                    <li>Nueva Kango / utilitario $50,850</li>
                     <li>Mercedes Benz Vito $85,320</li>
                     <li>Hiace/Sprinter $111,275</li>
                   </ul>
@@ -882,7 +880,7 @@
                   <ul>
                     <li>Auto urbano $33,660</li>
                     <li>Auto ejecutivo $39,960</li>
-                    <li>Nueva Kangoo $49,500</li>
+                    <li>Nueva Kango / utilitario $49,500</li>
                     <li>Mercedes Benz Vito $82,710</li>
                     <li>Hiace/Sprinter $107,370</li>
                   </ul>
@@ -891,7 +889,7 @@
                   <ul>
                     <li>Auto urbano $35,460</li>
                     <li>Auto ejecutivo $42,120</li>
-                    <li>Nueva Kangoo $52,200</li>
+                    <li>Nueva Kango / utilitario $52,200</li>
                     <li>Mercedes Benz Vito $87,120</li>
                     <li>Hiace/Sprinter $113,130</li>
                   </ul>
@@ -900,7 +898,7 @@
                   <ul>
                     <li>Auto urbano $41,850</li>
                     <li>Auto ejecutivo $49,680</li>
-                    <li>Nueva Kangoo $61,560</li>
+                    <li>Nueva Kango / utilitario $61,560</li>
                     <li>Mercedes Benz Vito $102,780</li>
                     <li>Hiace/Sprinter $133,470</li>
                   </ul>
@@ -909,7 +907,7 @@
                   <ul>
                     <li>Auto urbano $44,550</li>
                     <li>Auto ejecutivo $52,920</li>
-                    <li>Nueva Kangoo $65,520</li>
+                    <li>Nueva Kango / utilitario $65,520</li>
                     <li>Mercedes Benz Vito $109,530</li>
                     <li>Hiace/Sprinter $142,110</li>
                   </ul>
@@ -918,7 +916,7 @@
                   <ul>
                     <li>Auto urbano $54,540</li>
                     <li>Auto ejecutivo $64,890</li>
-                    <li>Nueva Kangoo $80,280</li>
+                    <li>Nueva Kango / utilitario $80,280</li>
                     <li>Mercedes Benz Vito $134,100</li>
                     <li>Hiace/Sprinter $174,060</li>
                   </ul>
@@ -927,7 +925,7 @@
                   <ul>
                     <li>Auto urbano $70,920</li>
                     <li>Auto ejecutivo $84,330</li>
-                    <li>Nueva Kangoo $104,310</li>
+                    <li>Nueva Kango / utilitario $104,310</li>
                     <li>Mercedes Benz Vito $174,330</li>
                     <li>Hiace/Sprinter $226,260</li>
                   </ul>
@@ -955,7 +953,7 @@
                   <ul>
                     <li>Auto urbano $16,380</li>
                     <li>Auto ejecutivo $19,440</li>
-                    <li>Nueva Kangoo $24,930</li>
+                    <li>Nueva Kango / utilitario $24,930</li>
                     <li>Mercedes Benz Vito $42,230</li>
                     <li>Hiace/Sprinter $54,600</li>
                   </ul>
@@ -964,7 +962,7 @@
                   <ul>
                     <li>Auto urbano $33,900</li>
                     <li>Auto ejecutivo $40,500</li>
-                    <li>Nueva Kangoo $50,130</li>
+                    <li>Nueva Kango / utilitario $50,130</li>
                     <li>Mercedes Benz Vito $83,790</li>
                     <li>Hiace/Sprinter $108,810</li>
                   </ul>
@@ -973,7 +971,7 @@
                   <ul>
                     <li>Auto urbano $26,370</li>
                     <li>Auto ejecutivo $31,320</li>
-                    <li>Nueva Kangoo $38,790</li>
+                    <li>Nueva Kango / utilitario $38,790</li>
                     <li>Mercedes Benz Vito $64,800</li>
                     <li>Hiace/Sprinter $84,150</li>
                   </ul>
@@ -982,7 +980,7 @@
                   <ul>
                     <li>Auto urbano $29,700</li>
                     <li>Auto ejecutivo $35,640</li>
-                    <li>Nueva Kangoo $44,100</li>
+                    <li>Nueva Kango / utilitario $44,100</li>
                     <li>Mercedes Benz Vito $74,710</li>
                     <li>Hiace/Sprinter $96,760</li>
                   </ul>
@@ -991,7 +989,7 @@
                   <ul>
                     <li>Auto urbano $45,450</li>
                     <li>Auto ejecutivo $54,090</li>
-                    <li>Nueva Kangoo $66,870</li>
+                    <li>Nueva Kango / utilitario $66,870</li>
                     <li>Mercedes Benz Vito $111,780</li>
                     <li>Hiace/Sprinter $144,080</li>
                   </ul>
@@ -1000,7 +998,7 @@
                   <ul>
                     <li>Auto urbano $36,360</li>
                     <li>Auto ejecutivo $43,200</li>
-                    <li>Nueva Kangoo $53,460</li>
+                    <li>Nueva Kango / utilitario $53,460</li>
                     <li>Mercedes Benz Vito $89,370</li>
                     <li>Hiace/Sprinter $116,010</li>
                   </ul>
@@ -1009,7 +1007,7 @@
                   <ul>
                     <li>Auto urbano $35,460</li>
                     <li>Auto ejecutivo $42,120</li>
-                    <li>Nueva Kangoo $52,200</li>
+                    <li>Nueva Kango / utilitario $52,200</li>
                     <li>Mercedes Benz Vito $87,120</li>
                     <li>Hiace/Sprinter $113,130</li>
                   </ul>
@@ -1018,7 +1016,7 @@
                   <ul>
                     <li>Auto urbano $37,260</li>
                     <li>Auto ejecutivo $44,280</li>
-                    <li>Nueva Kangoo $54,810</li>
+                    <li>Nueva Kango / utilitario $54,810</li>
                     <li>Mercedes Benz Vito $91,620</li>
                     <li>Hiace/Sprinter $118,890</li>
                   </ul>
@@ -1027,7 +1025,7 @@
                   <ul>
                     <li>Auto urbano $39,060</li>
                     <li>Auto ejecutivo $46,440</li>
-                    <li>Nueva Kangoo $57,510</li>
+                    <li>Nueva Kango / utilitario $57,510</li>
                     <li>Mercedes Benz Vito $96,120</li>
                     <li>Hiace/Sprinter $124,740</li>
                   </ul>
@@ -1036,7 +1034,7 @@
                   <ul>
                     <li>Auto urbano $50,940</li>
                     <li>Auto ejecutivo $60,570</li>
-                    <li>Nueva Kangoo $74,880</li>
+                    <li>Nueva Kango / utilitario $74,880</li>
                     <li>Mercedes Benz Vito $125,100</li>
                     <li>Hiace/Sprinter $162,450</li>
                   </ul>
@@ -1045,7 +1043,7 @@
                   <ul>
                     <li>Auto urbano $63,630</li>
                     <li>Auto ejecutivo $75,690</li>
-                    <li>Nueva Kangoo $93,600</li>
+                    <li>Nueva Kango / utilitario $93,600</li>
                     <li>Mercedes Benz Vito $156,420</li>
                     <li>Hiace/Sprinter $203,040</li>
                   </ul>
@@ -1056,7 +1054,7 @@
                   <ul>
                     <li>Auto urbano $20,880</li>
                     <li>Auto ejecutivo $24,840</li>
-                    <li>Nueva Kangoo $30,780</li>
+                    <li>Nueva Kango / utilitario $30,780</li>
                     <li>Mercedes Benz Vito $51,390</li>
                     <li>Hiace/Sprinter $66,690</li>
                   </ul>
@@ -1065,7 +1063,7 @@
                   <ul>
                     <li>Auto urbano $28,170</li>
                     <li>Auto ejecutivo $33,480</li>
-                    <li>Nueva Kangoo $41,490</li>
+                    <li>Nueva Kango / utilitario $41,490</li>
                     <li>Mercedes Benz Vito $69,300</li>
                     <li>Hiace/Sprinter $89,910</li>
                   </ul>
@@ -1074,7 +1072,7 @@
                   <ul>
                     <li>Auto urbano $31,230</li>
                     <li>Auto ejecutivo $37,080</li>
-                    <li>Nueva Kangoo $45,450</li>
+                    <li>Nueva Kango / utilitario $45,450</li>
                     <li>Mercedes Benz Vito $76,140</li>
                     <li>Hiace/Sprinter $98,640</li>
                   </ul>
@@ -1083,7 +1081,7 @@
                   <ul>
                     <li>Auto urbano $29,070</li>
                     <li>Auto ejecutivo $34,560</li>
-                    <li>Nueva Kangoo $42,840</li>
+                    <li>Nueva Kango / utilitario $42,840</li>
                     <li>Mercedes Benz Vito $71,550</li>
                     <li>Hiace/Sprinter $92,790</li>
                   </ul>
@@ -1092,7 +1090,7 @@
                   <ul>
                     <li>Auto urbano $39,060</li>
                     <li>Auto ejecutivo $46,440</li>
-                    <li>Nueva Kangoo $57,510</li>
+                    <li>Nueva Kango / utilitario $57,510</li>
                     <li>Mercedes Benz Vito $96,120</li>
                     <li>Hiace/Sprinter $124,740</li>
                   </ul>
@@ -1101,7 +1099,7 @@
                   <ul>
                     <li>Auto urbano $35,460</li>
                     <li>Auto ejecutivo $42,120</li>
-                    <li>Nueva Kangoo $52,200</li>
+                    <li>Nueva Kango / utilitario $52,200</li>
                     <li>Mercedes Benz Vito $87,120</li>
                     <li>Hiace/Sprinter $113,130</li>
                   </ul>
@@ -1110,7 +1108,7 @@
                   <ul>
                     <li>Auto urbano $46,350</li>
                     <li>Auto ejecutivo $55,170</li>
-                    <li>Nueva Kangoo $68,220</li>
+                    <li>Nueva Kango / utilitario $68,220</li>
                     <li>Mercedes Benz Vito $113,940</li>
                     <li>Hiace/Sprinter $147,960</li>
                   </ul>
@@ -1119,7 +1117,7 @@
                   <ul>
                     <li>Auto urbano $43,650</li>
                     <li>Auto ejecutivo $51,840</li>
-                    <li>Nueva Kangoo $63,630</li>
+                    <li>Nueva Kango / utilitario $63,630</li>
                     <li>Mercedes Benz Vito $105,240</li>
                     <li>Hiace/Sprinter $137,130</li>
                   </ul>
@@ -1128,7 +1126,7 @@
                   <ul>
                     <li>Auto urbano $49,050</li>
                     <li>Auto ejecutivo $58,410</li>
-                    <li>Nueva Kangoo $72,180</li>
+                    <li>Nueva Kango / utilitario $72,180</li>
                     <li>Mercedes Benz Vito $120,690</li>
                     <li>Hiace/Sprinter $156,600</li>
                   </ul>
@@ -1137,7 +1135,7 @@
                   <ul>
                     <li>Auto urbano $58,140</li>
                     <li>Auto ejecutivo $69,210</li>
-                    <li>Nueva Kangoo $85,590</li>
+                    <li>Nueva Kango / utilitario $85,590</li>
                     <li>Mercedes Benz Vito $142,410</li>
                     <li>Hiace/Sprinter $185,670</li>
                   </ul>
@@ -1146,7 +1144,7 @@
                   <ul>
                     <li>Auto urbano $70,920</li>
                     <li>Auto ejecutivo $84,330</li>
-                    <li>Nueva Kangoo $104,310</li>
+                    <li>Nueva Kango / utilitario $104,310</li>
                     <li>Mercedes Benz Vito $174,330</li>
                     <li>Hiace/Sprinter $226,260</li>
                   </ul>
@@ -1157,7 +1155,7 @@
                   <ul>
                     <li>Auto urbano $25,470</li>
                     <li>Auto ejecutivo $30,240</li>
-                    <li>Nueva Kangoo $37,440</li>
+                    <li>Nueva Kango / utilitario $37,440</li>
                     <li>Mercedes Benz Vito $62,160</li>
                     <li>Hiace/Sprinter $81,450</li>
                   </ul>
@@ -1166,7 +1164,7 @@
                   <ul>
                     <li>Auto urbano $26,640</li>
                     <li>Auto ejecutivo $31,560</li>
-                    <li>Nueva Kangoo $39,150</li>
+                    <li>Nueva Kango / utilitario $39,150</li>
                     <li>Mercedes Benz Vito $65,520</li>
                     <li>Hiace/Sprinter $85,030</li>
                   </ul>
@@ -1175,7 +1173,7 @@
                   <ul>
                     <li>Auto urbano $27,270</li>
                     <li>Auto ejecutivo $32,400</li>
-                    <li>Nueva Kangoo $40,140</li>
+                    <li>Nueva Kango / utilitario $40,140</li>
                     <li>Mercedes Benz Vito $67,050</li>
                     <li>Hiace/Sprinter $87,570</li>
                   </ul>
@@ -1184,7 +1182,7 @@
                   <ul>
                     <li>Auto urbano $30,030</li>
                     <li>Auto ejecutivo $35,640</li>
-                    <li>Nueva Kangoo $44,100</li>
+                    <li>Nueva Kango / utilitario $44,100</li>
                     <li>Mercedes Benz Vito $73,260</li>
                     <li>Hiace/Sprinter $95,130</li>
                   </ul>
@@ -1193,7 +1191,7 @@
                   <ul>
                     <li>Auto urbano $34,560</li>
                     <li>Auto ejecutivo $41,040</li>
-                    <li>Nueva Kangoo $51,150</li>
+                    <li>Nueva Kango / utilitario $51,150</li>
                     <li>Mercedes Benz Vito $85,440</li>
                     <li>Hiace/Sprinter $111,975</li>
                   </ul>
@@ -1202,7 +1200,7 @@
                   <ul>
                     <li>Auto urbano $33,660</li>
                     <li>Auto ejecutivo $39,960</li>
-                    <li>Nueva Kangoo $49,500</li>
+                    <li>Nueva Kango / utilitario $49,500</li>
                     <li>Mercedes Benz Vito $82,710</li>
                     <li>Hiace/Sprinter $107,370</li>
                   </ul>
@@ -1211,7 +1209,7 @@
                   <ul>
                     <li>Auto urbano $35,460</li>
                     <li>Auto ejecutivo $42,120</li>
-                    <li>Nueva Kangoo $52,200</li>
+                    <li>Nueva Kango / utilitario $52,200</li>
                     <li>Mercedes Benz Vito $86,640</li>
                     <li>Hiace/Sprinter $112,350</li>
                   </ul>
@@ -1220,7 +1218,7 @@
                   <ul>
                     <li>Auto urbano $41,850</li>
                     <li>Auto ejecutivo $49,680</li>
-                    <li>Nueva Kangoo $61,560</li>
+                    <li>Nueva Kango / utilitario $61,560</li>
                     <li>Mercedes Benz Vito $100,440</li>
                     <li>Hiace/Sprinter $130,440</li>
                   </ul>
@@ -1229,7 +1227,7 @@
                   <ul>
                     <li>Auto urbano $44,550</li>
                     <li>Auto ejecutivo $52,920</li>
-                    <li>Nueva Kangoo $65,520</li>
+                    <li>Nueva Kango / utilitario $65,520</li>
                     <li>Mercedes Benz Vito $108,930</li>
                     <li>Hiace/Sprinter $141,630</li>
                   </ul>
@@ -1238,7 +1236,7 @@
                   <ul>
                     <li>Auto urbano $54,540</li>
                     <li>Auto ejecutivo $64,890</li>
-                    <li>Nueva Kangoo $80,280</li>
+                    <li>Nueva Kango / utilitario $80,280</li>
                     <li>Mercedes Benz Vito $133,380</li>
                     <li>Hiace/Sprinter $173,460</li>
                   </ul>
@@ -1247,7 +1245,7 @@
                   <ul>
                     <li>Auto urbano $70,920</li>
                     <li>Auto ejecutivo $84,330</li>
-                    <li>Nueva Kangoo $104,310</li>
+                    <li>Nueva Kango / utilitario $104,310</li>
                     <li>Mercedes Benz Vito $174,330</li>
                     <li>Hiace/Sprinter $226,260</li>
                   </ul>
@@ -1264,7 +1262,7 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              LARGA DISTANCIA DESDE CABA
+              DESDE / HASTA - LARGA DISTANCIA DESDE CABA
             </button>
           </h3>
           <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -1275,7 +1273,7 @@
                     <ul>
                       <li>Auto urbano: $91,800</li>
                       <li>Auto ejecutivo: $108,900</li>
-                      <li>Nueva Kangoo: $135,000</li>
+                      <li>Nueva Kango / utilitario: $135,000</li>
                       <li>Mercedes Benz Vito: $213,300</li>
                       <li>Hiace/Sprinter: $297,900</li>
                     </ul>
@@ -1283,7 +1281,7 @@
                     <ul>
                         <li>Auto urbano: $202,500</li>
                         <li>Auto ejecutivo: $231,300</li>
-                        <li>Nueva Kangoo: $277,200</li>
+                        <li>Nueva Kango / utilitario: $277,200</li>
                         <li>Mercedes Benz Vito: $470,700</li>
                         <li>Hiace/Sprinter: $714,600</li>
                     </ul>
@@ -1291,7 +1289,7 @@
                     <ul>
                         <li>Auto urbano: $225,000</li>
                         <li>Auto ejecutivo: $257,400</li>
-                        <li>Nueva Kangoo: $308,700</li>
+                        <li>Nueva Kango / utilitario: $308,700</li>
                         <li>Mercedes Benz Vito: $522,900</li>
                         <li>Hiace/Sprinter: $794,700</li>
                     </ul>
@@ -1299,7 +1297,7 @@
                     <ul>
                         <li>Auto urbano: $405,000</li>
                         <li>Auto ejecutivo: $463,500</li>
-                        <li>Nueva Kangoo: $555,300</li>
+                        <li>Nueva Kango / utilitario: $555,300</li>
                         <li>Mercedes Benz Vito: $941,400</li>
                         <li>Hiace/Sprinter: $1,430,100</li>
                     </ul>
@@ -1307,7 +1305,7 @@
                     <ul>
                         <li>Auto urbano: $321,300</li>
                         <li>Auto ejecutivo: $368,100</li>
-                        <li>Nueva Kangoo: $441,000</li>
+                        <li>Nueva Kango / utilitario: $441,000</li>
                         <li>Mercedes Benz Vito: $747,900</li>
                         <li>Hiace/Sprinter: $1,134,900</li>
                     </ul>
@@ -1318,7 +1316,7 @@
                   <ul>
                       <li>Auto urbano: $91,800</li>
                       <li>Auto ejecutivo: $108,900</li>
-                      <li>Nueva Kangoo: $135,000</li>
+                      <li>Nueva Kango / utilitario: $135,000</li>
                       <li>Mercedes Benz Vito: $213,300</li>
                       <li>Hiace/Sprinter: $297,900</li>
                   </ul>
@@ -1327,7 +1325,7 @@
                   <ul>
                       <li>Auto urbano: $108,900</li>
                       <li>Auto ejecutivo: $129,600</li>
-                      <li>Nueva Kangoo: $159,300</li>
+                      <li>Nueva Kango / utilitario: $159,300</li>
                       <li>Mercedes Benz Vito: $252,900</li>
                       <li>Hiace/Sprinter: $354,600</li>
                   </ul>
@@ -1336,7 +1334,7 @@
                   <ul>
                       <li>Auto urbano: $225,000</li>
                       <li>Auto ejecutivo: $257,400</li>
-                      <li>Nueva Kangoo: $308,700</li>
+                      <li>Nueva Kango / utilitario: $308,700</li>
                       <li>Mercedes Benz Vito: $522,900</li>
                       <li>Hiace/Sprinter: $794,700</li>
                   </ul>
@@ -1345,7 +1343,7 @@
                   <ul>
                       <li>Auto urbano: $241,200</li>
                       <li>Auto ejecutivo: $275,400</li>
-                      <li>Nueva Kangoo: $330,300</li>
+                      <li>Nueva Kango / utilitario: $330,300</li>
                       <li>Mercedes Benz Vito: $560,700</li>
                       <li>Hiace/Sprinter: $851,400</li>
                   </ul>
@@ -1354,7 +1352,7 @@
                   <ul>
                       <li>Auto urbano: $263,700</li>
                       <li>Auto ejecutivo: $301,500</li>
-                      <li>Nueva Kangoo: $360,900</li>
+                      <li>Nueva Kango / utilitario: $360,900</li>
                       <li>Mercedes Benz Vito: $612,900</li>
                       <li>Hiace/Sprinter: $930,300</li>
                   </ul>
@@ -1365,7 +1363,7 @@
                   <ul>
                       <li>Auto urbano: $102,600</li>
                       <li>Auto ejecutivo: $122,100</li>
-                      <li>Nueva Kangoo: $151,200</li>
+                      <li>Nueva Kango / utilitario: $151,200</li>
                       <li>Mercedes Benz Vito: $226,350</li>
                       <li>Hiace/Sprinter: $317,850</li>
                   </ul>
@@ -1374,7 +1372,7 @@
                   <ul>
                       <li>Auto urbano: $477,450</li>
                       <li>Auto ejecutivo: $518,400</li>
-                      <li>Nueva Kangoo: $621,000</li>
+                      <li>Nueva Kango / utilitario: $621,000</li>
                       <li>Mercedes Benz Vito: $1,053,450</li>
                       <li>Hiace/Sprinter: $1,627,100</li>
                   </ul>
@@ -1383,7 +1381,7 @@
                   <ul>
                       <li>Auto urbano: $171,900</li>
                       <li>Auto ejecutivo: $187,200</li>
-                      <li>Nueva Kangoo: $225,000</li>
+                      <li>Nueva Kango / utilitario: $225,000</li>
                       <li>Mercedes Benz Vito: $380,400</li>
                       <li>Hiace/Sprinter: $578,850</li>
                   </ul>
@@ -1392,7 +1390,7 @@
                   <ul>
                       <li>Auto urbano: $171,900</li>
                       <li>Auto ejecutivo: $187,200</li>
-                      <li>Nueva Kangoo: $225,000</li>
+                      <li>Nueva Kango / utilitario: $225,000</li>
                       <li>Mercedes Benz Vito: $380,400</li>
                       <li>Hiace/Sprinter: $578,850</li>
                   </ul>
@@ -1401,7 +1399,7 @@
                   <ul>
                       <li>Auto urbano: $321,300</li>
                       <li>Auto ejecutivo: $368,100</li>
-                      <li>Nueva Kangoo: $441,000</li>
+                      <li>Nueva Kango / utilitario: $441,000</li>
                       <li>Mercedes Benz Vito: $747,900</li>
                       <li>Hiace/Sprinter: $1,134,900</li>
                   </ul>
@@ -1437,6 +1435,7 @@
                     <li>Barrio de San Telmo </li>
                     <li>Barrio de Palermo </li>
                     <li>Jardín Japonés </li>
+                    <li>Estadio Boca Jrs</li>
                 </ul>
                 </article><!-- ends col1 -->
                 <p class="fst-italic text-center">Para conocer el precio de las visitas a los lugares emblemáticos de Buenos Aires, se recomienda consultar directamente. <br> Además, contamos con guías de turismo para ofrecerte la mejor experiencia durante tu recorrido.</p>
@@ -1458,21 +1457,21 @@
                   <ul>
                       <li>Auto urbano: $909</li>
                       <li>Auto ejecutivo: $1,080</li>
-                      <li>Nueva Kangoo: $1,437</li>
+                      <li>Nueva Kango / utilitario: $1,437</li>
                       <li>Mercedes Benz Vito: $2,221</li>
-                      <li>Hiace/Sprinter: $2,901 + IVA del 10,5%</li>
+                      <li>Hiace/Sprinter: $2,901 </li>
+                      <p class="fw-bold">Hasta 100 Kilómetros</p>
                   </ul>
               
-                  <h4>Hasta 100KM - Precio por Kilómetro Larga Distancia (2 choferes) + IVA del 10,5%</h4>
+                  <h4>Precio por Kilómetro Larga Distancia (2 choferes)</h4>
                   <ul>
-                      <li>Auto urbano: $786 + IVA</li>
-                      <li>Auto ejecutivo: $829 + IVA</li>
-                      <li>Nueva Kangoo: $1,011 + IVA</li>
-                      <li>Mercedes Benz Vito: $1,700 + IVA</li>
-                      <li>Hiace/Sprinter: $2,395 + IVA</li>
+                      <li>Auto urbano: $786</li>
+                      <li>Auto ejecutivo: $829A</li>
+                      <li>Nueva Kango / utilitario: $1,011</li>
+                      <li>Mercedes Benz Vito: $1,700 </li>
+                      <li>Hiace/Sprinter: $2,395 </li>
+                      <p class="fw-bold">Más de 1000KM (+IVA del 10,5%)</p>
                   </ul>
-              
-                  <h4>Más de 1000KM (+IVA del 10,5%)</h4>
                 </article>
               
                 <article class="col-lg-4">
@@ -1480,28 +1479,21 @@
                   <ul>
                       <li>Auto urbano: $762</li>
                       <li>Auto ejecutivo: $905</li>
-                      <li>Nueva Kangoo: $1,123</li>
+                      <li>Nueva Kango / utilitario: $1,123</li>
                       <li>Mercedes Benz Vito: $1,777</li>
                       <li>Hiace/Sprinter: $2,480</li>
+                      <p class="fw-bold">De 100 a 200KM (+IVA del 10,5%)</p>
                   </ul>
               
-                  <h4>De 100 a 200KM - Precio por Kilómetro Larga Distancia (2 choferes) + IVA del 10,5%</h4>
-                  <ul>
-                      <li>Auto urbano: $833 + IVA</li>
-                      <li>Auto ejecutivo: $990 + IVA</li>
-                      <li>Nueva Kangoo: $1,225 + IVA</li>
-                      <li>Mercedes Benz Vito: $1,950 + IVA</li>
-                      <li>Hiace/Sprinter: $2,722 + IVA</li>
-                  </ul>
-              
-                  <h4>Hora de espera (No incluye parking)</h4>
+                  <h4>Hora de espera </h4>
                   <ul>
                       <li>Auto urbano: $9,800</li>
                       <li>Auto ejecutivo: $10,800</li>
-                      <li>Nueva Kangoo: $13,200</li>
+                      <li>Nueva Kango / utilitario: $13,200</li>
                       <li>Van 100% eléctrica: $20,000</li>
                       <li>Mercedes Benz Vito: $22,400</li>
                       <li>Hiace/Sprinter: $27,600</li>
+                      <p class="fw-bold">No incluye parking</p>
                   </ul>
                 </article>
               
@@ -1510,28 +1502,19 @@
                   <ul>
                       <li>Auto urbano: $714</li>
                       <li>Auto ejecutivo: $817</li>
-                      <li>Nueva Kangoo: $979</li>
+                      <li>Nueva Kango / utilitario: $979</li>
                       <li>Mercedes Benz Vito: $1,661</li>
                       <li>Hiace/Sprinter: $2,522</li>
                   </ul>
               
-                  <h4>De 200 a 1000KM - Precio por Kilómetro Larga Distancia + IVA del 10,5%</h4>
-                  <ul>
-                      <li>Auto urbano: $786 + IVA</li>
-                      <li>Auto ejecutivo: $899 + IVA</li>
-                      <li>Nueva Kangoo: $1,080 + IVA</li>
-                      <li>Mercedes Benz Vito: $1,830 + IVA</li>
-                      <li>Hiace/Sprinter: $2,775 + IVA</li>
-                  </ul>
-              
-                  <h4>Hora de disposición (Mínimo 4hs, 15 km libres x hora, No incluye peajes)</h4>
+                  <h4>Hora de disposición</h4>
                   <ul>
                       <li>Auto urbano: $18,900</li>
                       <li>Auto ejecutivo: $22,100</li>
-                      <li>Nueva Kangoo: $28,400</li>
-                      <li>Van 100% eléctrica: $34,800</li>
+                      <li>Nueva Kango / utilitario: $28,400</li>
                       <li>Mercedes Benz Vito: $40,600</li>
                       <li>Hiace/Sprinter: $47,900 + IVA del 10,5%</li>
+                      <p class="fw-bold">Mínimo 4hs <br> 15 km libres x hora <br> No incluye peajes</p>
                   </ul>
                 </article>
             
@@ -1691,7 +1674,7 @@
           </h2>
           <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionFaqs2">
             <div class="accordion-body">
-              <p>Aceptamos todas las tarjetas de crédito y débito, así como también pagos mediante QR para escanear. También ofrecemos la opción de realizar transferencias bancarias o pagar con criptomonedas. En los traslados de larga distancia, aplicamos un 5% de recargo en caso de pagar con tarjeta de crédito.</p>
+              <p>Aceptamos todas las tarjetas de crédito y débito, así como también pagos mediante QR para escanear. También ofrecemos la opción de realizar transferencias bancarias. En los traslados de larga distancia, aplicamos un 10% de recargo en caso de pagar con tarjeta de crédito, transferencia o QR. En viajes urbanos es un 5%.</p>
             </div>
           </div>
         </div><!-- ends 4 -->
@@ -1860,8 +1843,8 @@
       <p>Copyright © 2024 - Inter Transfer -Todos los derechos reservados</p>
     </footer>
     <!-- whatsapp -->
-    <div class="whatsapp-buble">
-      <a href="https://wa.me/+541134875549">
+    <div class="bounce-in-left whatsapp-buble">
+      <a href="https://wa.me/+541134875549" target="_blank">
         <img src="./assets/img/whatsapp.svg" alt="Hace tu reserva por whatsapp">
       </a>
     </div>
@@ -1872,16 +1855,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/slick.js"></script>
     <script src="./assets/js/main.js"></script>
-    <!-- START Webchat-->
-    <script>
-      (function () {
-        let js = document.createElement('script');
-        js.type = 'text/javascript';
-        js.async = 1;
-        js.src = 'https://go.botmaker.com/rest/webchat/p/GZFTBR4QUK/init.js';
-        document.body.appendChild(js);
-      })();
-    </script>
-    <!-- END Webchat-->
+   
 </body>
 </html>

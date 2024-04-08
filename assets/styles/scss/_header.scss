@@ -54,6 +54,16 @@
                     text-transform: uppercase;
                     color: $white;
                     font-weight: 500;
+                    /*Subrayado animado*/
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover{
+                        /*Subrayado animado*/
+                        background-size: 100% 2px;
+                    }
                 }
             }
         }
@@ -65,14 +75,15 @@
 }
 
 .hero{
-    transform: translateY(-60px);
+    transform: translateY(-30px);
     position: relative;
     z-index: 1;
     height: 90vh;
-    background: url(../../img/bg-hero.webp) no-repeat left 40px;
+    animation: cambio-fondo 12s infinite alternate linear; 
     background-size:cover;
     display: flex;
     justify-content: flex-end;
+    overflow: hidden;
     .container{
         display: flex;
         justify-content: flex-end;
@@ -80,7 +91,7 @@
             width: 280px!important;
             height: 267px;
             flex-shrink: 0; 
-            margin-top: 100px;
+            margin-top: 50px;
             width: 30%;
             position: relative;
             z-index: 5;

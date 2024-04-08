@@ -36,3 +36,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// whatsapp
+function enviarWhatsapp() {
+    const desde = document.getElementById('desdeInput').value;
+    const hasta = document.getElementById('hastaInput').value;
+    const fecha = document.getElementById('fechaInput').value;
+    const hora = document.getElementById('horaInput').value;
+
+    const mensaje = `Reserva de traslado:\nDesde: ${desde}\nHasta: ${hasta}\nFecha: ${fecha}\nHora: ${hora}`;
+
+    // Reemplaza el número
+    window.open(`https://api.whatsapp.com/send?phone=+541134875549&text=${encodeURIComponent(mensaje)}`);
+  }
+
+//   <!-- START Webchat-->
+    (function () {
+      let js = document.createElement('script');
+      js.type = 'text/javascript';
+      js.async = 1;
+      js.src = 'https://go.botmaker.com/rest/webchat/p/GZFTBR4QUK/init.js';
+      document.body.appendChild(js);
+    })();
+
+//   <!-- END Webchat-->
