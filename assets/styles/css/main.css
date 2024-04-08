@@ -12190,9 +12190,11 @@ h3,
 .our-fleet .multiple-items .slick-next {
   display: block;
 }
-.our-fleet .multiple-items .slick-prev::before,
 .our-fleet .multiple-items .slick-next::before {
-  color: rgb(103, 110, 128);
+  color: rgb(103, 110, 128) !important;
+}
+.our-fleet .multiple-items .slick-prev::before {
+  color: rgb(103, 110, 128) !important;
 }
 .our-fleet .multiple-items figure {
   border: solid 1px rgb(103, 110, 128);

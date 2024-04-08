@@ -14,9 +14,12 @@
         .slick-prev,
         .slick-next {
             display: block; 
-            &::before{
-                color: $mainColor;
-            }
+        }
+        .slick-next::before{
+          color: rgb(103, 110, 128)!important;
+        }
+        .slick-prev::before{
+          color: rgb(103, 110, 128)!important;
         }
         figure{
           border:solid 1px $mainColor;
