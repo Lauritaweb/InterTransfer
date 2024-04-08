@@ -81,6 +81,7 @@
         }
     }
     .hero{
+        animation:none;
         background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
         transform: translateY(0);
         background-size: cover;

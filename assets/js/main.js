@@ -1,3 +1,24 @@
+// lazy load
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyImages = document.querySelectorAll('img.lazy');
+
+    var lazyLoad = function() {
+      lazyImages.forEach(function(img) {
+        if (img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0) {
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', lazyLoad);
+    window.addEventListener('resize', lazyLoad);
+    window.addEventListener('orientationchange', lazyLoad);
+
+    lazyLoad();
+  });
+
+// ends lazy load
 document.addEventListener('DOMContentLoaded', function() {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');

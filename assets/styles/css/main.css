@@ -11926,6 +11926,15 @@ h3,
   font-size: 0.9em !important;
 }
 
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
 /**
  * ----------------------------------------
  * animation fade-in
@@ -12459,6 +12468,7 @@ footer p {
     margin-bottom: 10px;
   }
   .hero {
+    animation: none;
     background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
     transform: translateY(0);
     background-size: cover;
