@@ -43,12 +43,13 @@ function enviarWhatsapp() {
     const hasta = document.getElementById('hastaInput').value;
     const fecha = document.getElementById('fechaInput').value;
     const hora = document.getElementById('horaInput').value;
+    const cantPax = document.getElementById('cantPax').value;
 
-    const mensaje = `Reserva de traslado:\nDesde: ${desde}\nHasta: ${hasta}\nFecha: ${fecha}\nHora: ${hora}`;
+    const mensaje = `Reserva de traslado:\nDesde: ${desde}\nHasta: ${hasta}\nFecha: ${fecha}\nHora: ${hora}\nCantidad de pasajeros: ${cantPax}`;
 
     // Reemplaza el número
     window.open(`https://api.whatsapp.com/send?phone=+541134875549&text=${encodeURIComponent(mensaje)}`);
-  }
+}
 
 //   <!-- START Webchat-->
     (function () {
