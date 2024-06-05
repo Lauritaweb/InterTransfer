@@ -79,7 +79,8 @@
     position: relative;
     z-index: 1;
     height: 90vh;
-    animation: cambio-fondo 12s infinite alternate linear; 
+    background-image: url(../../img/bg-hero.webp);
+    // animation: cambio-fondo 12s infinite alternate linear; 
     background-size:cover;
     display: flex;
     justify-content: flex-end;
