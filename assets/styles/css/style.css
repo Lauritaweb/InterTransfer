@@ -337,11 +337,16 @@ button:not(:disabled),
   -webkit-appearance: button;
 }
 
+iframe {
+  border: 0;
+}
+
 .figure {
   display: inline-block;
 }
 
-.container {
+.container,
+.container-fluid {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
@@ -635,7 +640,8 @@ button:not(:disabled),
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container {
+.navbar > .container,
+.navbar > .container-fluid {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -1207,6 +1213,10 @@ button:not(:disabled),
   box-sizing: border-box;
 }
 
+body {
+  background-color: white;
+}
+
 .container {
   width: 95% !important;
   max-width: 95%;
@@ -1381,6 +1391,17 @@ h3,
   animation: bounce-in-top 2s 1s both;
 }
 
+@keyframes cambio-fondo {
+  0%, 100% {
+    background-image: url(../../img/bg-hero.webp);
+  }
+  33% {
+    background-image: url(../../img/banner-ezeiza.png);
+  }
+  66% {
+    background-image: url(../../img/banner-aeroparque.png);
+  }
+}
 .header .row {
   margin: 0;
 }
@@ -1458,52 +1479,59 @@ h3,
   transform: translateY(-30px);
   position: relative;
   z-index: 1;
-  height: 90vh;
-  background-image: url(../../img/bg-hero.webp);
   background-size: cover;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
+  z-index: 3;
 }
-.hero .container {
+.hero .container-fluid {
   display: flex;
   justify-content: flex-end;
+  padding-left: 0;
+  padding-right: 0;
 }
-.hero .container .form {
+.hero .container-fluid .carousel {
+  width: 100%;
+}
+.hero .container-fluid .carousel img {
+  width: 100% !important;
+  object-fit: cover;
+}
+.hero .container-fluid .form {
   width: 280px !important;
   height: 267px;
-  flex-shrink: 0;
   margin-top: 50px;
-  width: 30%;
-  position: relative;
+  margin-right: 50px;
+  position: absolute;
   z-index: 5;
 }
-.hero .container .form #myTab .nav-item {
+.hero .container-fluid .form #myTab .nav-item {
   width: 50%;
 }
-.hero .container .form #myTab .nav-link {
+.hero .container-fluid .form #myTab .nav-link {
   border-color: transparent;
   background-color: rgb(249, 246, 246);
   width: 100%;
   font-size: 0.8em;
   color: rgb(103, 110, 128);
 }
-.hero .container .form #myTab .nav-link.active {
+.hero .container-fluid .form #myTab .nav-link.active {
   background-color: rgb(236, 101, 157) !important;
   color: rgb(249, 246, 246) !important;
 }
-.hero .container .form .tab-content {
+.hero .container-fluid .form .tab-content {
   background-color: rgba(103, 110, 128, 0.6);
   margin-top: 0 !important;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-size: 0.9em;
 }
-.hero .container .form .tab-content label {
+.hero .container-fluid .form .tab-content label {
   color: rgb(249, 246, 246);
   font-weight: 500;
 }
-.hero .container .form .tab-content input {
+.hero .container-fluid .form .tab-content input {
   font-size: 0.8em;
 }
 
@@ -1791,18 +1819,14 @@ footer p {
     margin-bottom: 10px;
   }
   .hero {
-    animation: none;
-    background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
     transform: translateY(0);
-    background-size: cover;
-    height: 80vh;
   }
-  .hero .container {
+  .hero .container-fluid {
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-  .hero .container .form {
+  .hero .container-fluid .form {
     margin-top: 20px;
   }
   .mobile-top {
@@ -1860,39 +1884,13 @@ footer p {
     text-align: center;
   }
 }
+@media (width <= 768px) {
+  .hero .form {
+    display: none;
+  }
+}
 @media (width >= 1500px) {
   .hero {
     height: 800px;
-  }
-}
-
-/* fixes purge */
-.our-fleet .multiple-items .slick-prev,
-.our-fleet .multiple-items .slick-next {
-  display: block;
-}
-.our-fleet .multiple-items .slick-next::before {
-  color: rgb(103, 110, 128) !important;
-}
-.our-fleet .multiple-items .slick-prev::before {
-  color: rgb(103, 110, 128) !important;
-}
-
-@media (width <= 992px){
-  .our-fleet .multiple-items .slick-prev {
-    transform: translateX(20px);
-  }
-  .our-fleet .multiple-items .slick-prev::before {
-    font-size: 40px;
-    position: relative;
-    z-index: 5;
-  }
-  .our-fleet .multiple-items .slick-next {
-    transform: translateX(-40px);
-  }
-  .our-fleet .multiple-items .slick-next::before {
-    font-size: 40px;
-    position: relative;
-    z-index: 5;
   }
 }

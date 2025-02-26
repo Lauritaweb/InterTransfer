@@ -109,11 +109,14 @@
 }  
 
 // bg hero
-// @keyframes cambio-fondo {
-//     0%, 100% {
-//         background-image: url(../../img/bg-hero.webp); 
-//     }
-//     50% {
-//         background-image: url(../../img/bg-hero-2.webp); 
-//     }
-// }
+@keyframes cambio-fondo {
+  0%, 100% {
+    background-image: url(../../img/bg-hero.webp);
+  }
+  33% {
+      background-image: url(../../img/banner-ezeiza.png);
+  }
+  66% {
+      background-image: url(../../img/banner-aeroparque.png);
+  }
+}

@@ -11851,6 +11851,10 @@ textarea.form-control-lg {
   box-sizing: border-box;
 }
 
+body {
+  background-color: white;
+}
+
 .container {
   width: 95% !important;
   max-width: 95%;
@@ -12042,6 +12046,17 @@ h3,
   animation: bounce-in-top 2s 1s both;
 }
 
+@keyframes cambio-fondo {
+  0%, 100% {
+    background-image: url(../../img/bg-hero.webp);
+  }
+  33% {
+    background-image: url(../../img/banner-ezeiza.png);
+  }
+  66% {
+    background-image: url(../../img/banner-aeroparque.png);
+  }
+}
 .header .row {
   margin: 0;
 }
@@ -12119,52 +12134,59 @@ h3,
   transform: translateY(-30px);
   position: relative;
   z-index: 1;
-  height: 90vh;
-  background-image: url(../../img/bg-hero.webp);
   background-size: cover;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
+  z-index: 3;
 }
-.hero .container {
+.hero .container-fluid, .hero .container-sm, .hero .container-md, .hero .container-lg, .hero .container-xl, .hero .container-xxl {
   display: flex;
   justify-content: flex-end;
+  padding-left: 0;
+  padding-right: 0;
 }
-.hero .container .form {
+.hero .container-fluid .carousel, .hero .container-sm .carousel, .hero .container-md .carousel, .hero .container-lg .carousel, .hero .container-xl .carousel, .hero .container-xxl .carousel {
+  width: 100%;
+}
+.hero .container-fluid .carousel img, .hero .container-sm .carousel img, .hero .container-md .carousel img, .hero .container-lg .carousel img, .hero .container-xl .carousel img, .hero .container-xxl .carousel img {
+  width: 100% !important;
+  object-fit: cover;
+}
+.hero .container-fluid .form, .hero .container-sm .form, .hero .container-md .form, .hero .container-lg .form, .hero .container-xl .form, .hero .container-xxl .form {
   width: 280px !important;
   height: 267px;
-  flex-shrink: 0;
   margin-top: 50px;
-  width: 30%;
-  position: relative;
+  margin-right: 50px;
+  position: absolute;
   z-index: 5;
 }
-.hero .container .form #myTab .nav-item {
+.hero .container-fluid .form #myTab .nav-item, .hero .container-sm .form #myTab .nav-item, .hero .container-md .form #myTab .nav-item, .hero .container-lg .form #myTab .nav-item, .hero .container-xl .form #myTab .nav-item, .hero .container-xxl .form #myTab .nav-item {
   width: 50%;
 }
-.hero .container .form #myTab .nav-link {
+.hero .container-fluid .form #myTab .nav-link, .hero .container-sm .form #myTab .nav-link, .hero .container-md .form #myTab .nav-link, .hero .container-lg .form #myTab .nav-link, .hero .container-xl .form #myTab .nav-link, .hero .container-xxl .form #myTab .nav-link {
   border-color: transparent;
   background-color: rgb(249, 246, 246);
   width: 100%;
   font-size: 0.8em;
   color: rgb(103, 110, 128);
 }
-.hero .container .form #myTab .nav-link.active {
+.hero .container-fluid .form #myTab .nav-link.active, .hero .container-sm .form #myTab .nav-link.active, .hero .container-md .form #myTab .nav-link.active, .hero .container-lg .form #myTab .nav-link.active, .hero .container-xl .form #myTab .nav-link.active, .hero .container-xxl .form #myTab .nav-link.active {
   background-color: rgb(236, 101, 157) !important;
   color: rgb(249, 246, 246) !important;
 }
-.hero .container .form .tab-content {
+.hero .container-fluid .form .tab-content, .hero .container-sm .form .tab-content, .hero .container-md .form .tab-content, .hero .container-lg .form .tab-content, .hero .container-xl .form .tab-content, .hero .container-xxl .form .tab-content {
   background-color: rgba(103, 110, 128, 0.6);
   margin-top: 0 !important;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-size: 0.9em;
 }
-.hero .container .form .tab-content label {
+.hero .container-fluid .form .tab-content label, .hero .container-sm .form .tab-content label, .hero .container-md .form .tab-content label, .hero .container-lg .form .tab-content label, .hero .container-xl .form .tab-content label, .hero .container-xxl .form .tab-content label {
   color: rgb(249, 246, 246);
   font-weight: 500;
 }
-.hero .container .form .tab-content input {
+.hero .container-fluid .form .tab-content input, .hero .container-sm .form .tab-content input, .hero .container-md .form .tab-content input, .hero .container-lg .form .tab-content input, .hero .container-xl .form .tab-content input, .hero .container-xxl .form .tab-content input {
   font-size: 0.8em;
 }
 
@@ -12462,18 +12484,14 @@ footer p {
     margin-bottom: 10px;
   }
   .hero {
-    animation: none;
-    background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
     transform: translateY(0);
-    background-size: cover;
-    height: 80vh;
   }
-  .hero .container {
+  .hero .container-fluid, .hero .container-sm, .hero .container-md, .hero .container-lg, .hero .container-xl, .hero .container-xxl {
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-  .hero .container .form {
+  .hero .container-fluid .form, .hero .container-sm .form, .hero .container-md .form, .hero .container-lg .form, .hero .container-xl .form, .hero .container-xxl .form {
     margin-top: 20px;
   }
   .mobile-top {
@@ -12545,6 +12563,11 @@ footer p {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+}
+@media (width <= 768px) {
+  .hero .form {
+    display: none;
   }
 }
 @media (width >= 1500px) {

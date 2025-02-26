@@ -81,12 +81,12 @@
         }
     }
     .hero{
-        animation:none;
-        background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
+        // animation:none;
+        // background: url(../../img/bg-hero-mobile.webp) top center no-repeat;
         transform: translateY(0);
-        background-size: cover;
-        height: 80vh;
-        .container{
+        // background-size: cover;
+        // height: 80vh;
+        .container-fluid{
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -172,6 +172,14 @@
     }
 }
 
+// mobile 768px
+@media (width<=768px){
+    .hero{
+        .form{
+            display: none;
+        }
+    }
+}
 
 // desktop and larger
 @media (width >= 1500px){

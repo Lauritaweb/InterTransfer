@@ -78,23 +78,33 @@
     transform: translateY(-30px);
     position: relative;
     z-index: 1;
-    height: 90vh;
-    background-image: url(../../img/bg-hero.webp);
-    // animation: cambio-fondo 12s infinite alternate linear; 
+    // height: 90vh;
+    // background-image: url(../../img/bg-hero.webp);
+    //animation: cambio-fondo 18s infinite alternate linear;
     background-size:cover;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
-    .container{
+    z-index: 3;
+    .container-fluid{
         display: flex;
         justify-content: flex-end;
+        padding-left: 0;
+        padding-right: 0;
+        .carousel{
+            width: 100%;
+            img{
+                width: 100%!important;
+                object-fit: cover;
+            }
+        }
         .form{
             width: 280px!important;
             height: 267px;
-            flex-shrink: 0; 
             margin-top: 50px;
-            width: 30%;
-            position: relative;
+            margin-right: 50px;
+            // width: 30%;
+            position:absolute;
             z-index: 5;
             #myTab{
                 .nav-item{
